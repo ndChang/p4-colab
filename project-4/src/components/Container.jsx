@@ -36,9 +36,9 @@ class Container extends React.Component {
   renderTag = () => {
     if (this.state.searchTags.length) {
       return this.state.searchTags.map(searchTag => {
-        if (this.state.recipes.includes(searchTag)) {
+        // if (this.state.recipes.includes(searchTag)) {
           return <Tag name={searchTag} onClick={this.handleClick(searchTag)} />;
-        }
+        // }
       });
     }
   };
