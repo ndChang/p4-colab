@@ -23,6 +23,10 @@
   font-family: Muli;
   line-height: 26px;
   margin-top: 0px;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
 
   }
   .Promo{
@@ -43,6 +47,10 @@
   }
   .site-title{
       font-family: Muli;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
       font-size: 60px;
       color: #1a1916;
       margin: 0;

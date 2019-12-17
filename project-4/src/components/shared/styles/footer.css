@@ -1,3 +1,4 @@
+
 .foot-container {
     background-color: #f8c446;
     bottom: 0;
@@ -7,6 +8,7 @@
     display: flex;
     flex-flow: row;
     color:white;
+    text-align: left;
 }
 
 .foot-title{
@@ -18,22 +20,22 @@ font-family: Muli;
 
 }
 .login-about{
-    margin-top: 30px;
-    margin-left: 85px;
+    margin-top: 35px;
+    margin-left: 125px;
     font-size: 18px;
     font-family: IBMPlexSans;
 
 }
 .terms-privacy{
-    margin-top: 30px;
-    margin-left: 85px;
+    margin-top: 35px;
+    margin-left: 125px;
     font-size: 18px; 
     font-family: IBMPlexSans;
 
 }
 .contact{
-    margin-top: 30px;
-    margin-left: 85px;
+    margin-top: 35px;
+    margin-left: 125px;
     font-size: 18px;
     font-weight: 800;
     font-family: IBMPlexSans;
@@ -45,8 +47,8 @@ font-family: Muli;
 
 }
 .social-media{
-    margin-top: 30px;
-    margin-left: 85px;
+    margin-top: 35px;
+    margin-left: 125px;
     font-family: IBMPlexSans;
     font-weight: bold;
 
