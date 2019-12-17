@@ -1,8 +1,9 @@
 import React from 'react'
-import Tag from './Tag'
+import Tag from './shared/Tag'
 import Search from './Search'
-import Card from './Card'
-
+import Card from './shared/Card'
+import Nav from './shared/Nav'
+import Footer from './shared/Footer'
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -67,10 +68,12 @@ class Container extends React.Component {
       console.log("render")
     return (
       <>
+      <Nav/>
         <h1>THIS IS ROOT</h1>
         <div>{this.renderTag()}</div>
         <Search onChange={this.handleChange} onSubmit={this.handleSubmit} />
         <Card />
+        <Footer/>
       </>
     );
   }
