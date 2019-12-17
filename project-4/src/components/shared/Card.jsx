@@ -8,9 +8,9 @@ const Card = (props) => {
         return (
             <div className="main-card-cont">
             <div className="main-card">
-            <img src={this.props.image} />
-            <div>{this.props.recipeName}</div>
-            <div>Prep Time: {props.totalTime}</div>
+            <img src={props.image} />
+            <div>{props.recipeName}</div>
+            <div>Prep Time: {props.prepTime}</div>
             </div>
             </div>
         )
