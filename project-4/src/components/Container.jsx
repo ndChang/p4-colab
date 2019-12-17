@@ -1,15 +1,11 @@
 import React from 'react'
 import Tag from './shared/Tag'
 import Search from './Search'
-<<<<<<< HEAD
-import Cardcontainer from './Cardcontainer'
-
-=======
 import Card from './shared/Card'
+import Cardcontainer from './Cardcontainer'
 import Nav from './shared/Nav'
 import Footer from './shared/Footer'
 import './shared/styles/container.css'
->>>>>>> 4b46061f2d1c15ec48382b5d4ce6385f171bfca1
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -82,18 +78,14 @@ class Container extends React.Component {
       <>
       <Nav/>
         <h1>THIS IS ROOT</h1>
-<<<<<<< HEAD
         <div>{ this.renderTag() }</div>
         <Search onChange={ this.handleChange } onSubmit={ this.handleSubmit } />
         <Cardcontainer recipes={ this.state.recipes } />
-=======
         <div>{this.renderTag()}</div>
         <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
-        <Card />
         <Footer/>
->>>>>>> 4b46061f2d1c15ec48382b5d4ce6385f171bfca1
       </>
     );
   }
 }
-export default Container;
+export default Container
