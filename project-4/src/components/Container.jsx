@@ -6,6 +6,7 @@ import Cardcontainer from './Cardcontainer'
 import Nav from './shared/Nav'
 import Footer from './shared/Footer'
 import './shared/styles/container.css'
+
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -39,51 +40,61 @@ class Container extends React.Component {
   renderTag = () => {
     if (this.state.searchTags.length) {
       return this.state.searchTags.map(searchTag => {
-          return <Tag className="snack" name={`${searchTag} X`} onClick={() => this.handleClick(searchTag)} />;
+        return (
+          <Tag
+            className="snack"
+            name={`${searchTag} X`}
+            onClick={() => this.handleClick(searchTag)}
+          />
+        );
       });
     }
   };
   handleClick = searchTag => {
-      console.log(this.state.searchTags.indexOf(searchTag))
-        this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1)
-        const searchTags = this.state.searchTags
-      this.setState({
-          searchTags: searchTags
-      })
+    console.log(this.state.searchTags.indexOf(searchTag));
+    this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1);
+    const searchTags = this.state.searchTags;
+    this.setState({
+      searchTags: searchTags
+    });
   };
   handleChange = e => {
     let searchValue = e.target.value;
-    this.setState(
-      {
-        searchValue
-      }
-    );
+    this.setState({
+      searchValue
+    });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    if(this.state.searchValue.length === 0) {
-        return
+    if (this.state.searchValue.length === 0) {
+      return;
     }
     let submission = this.state.searchValue;
     this.state.searchTags.push(submission);
     this.setState({
-        searchValue: ''
-    })
+      searchValue: ""
+    });
   };
 
   render() {
-      console.log("render")
+    console.log("render");
     return (
       <>
       <Nav/>
         <h1>THIS IS ROOT</h1>
-        <div>{ this.renderTag() }</div>
-        <Search onChange={ this.handleChange } onSubmit={ this.handleSubmit } />
         <Cardcontainer recipes={ this.state.recipes } />
+        <div className="flex">
+          <Search
+            onChange={this.handleChange}
+            alt="Search icon"
+            onSubmit={this.handleSubmit}
+            text="Search by recipe, ingredient, cuisine"
+          />
         <div>{this.renderTag()}</div>
         <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
         <Footer/>
+
       </>
     );
   }
