@@ -1,7 +1,6 @@
 import React from 'react'
 import './shared/styles/Search.css'
 
-
 function Search(props) {
     return (
         <form onSubmit={props.onSubmit}>

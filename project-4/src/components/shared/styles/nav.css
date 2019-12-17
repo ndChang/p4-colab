@@ -61,3 +61,71 @@
       transform: translate(-50%, -50%)
   }
   
+
+  @media screen and (max-width: 420px) {
+    .nav{
+      height: 80px;
+    }
+    .site-title{
+      font-family: Muli;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      font-size: 25px;
+      font-weight: 800;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #1a1916;
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      top: 4.2%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+  }
+  .Promo{
+    background-color: #151515;
+    color: white;
+    height: 0px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+  }
+  .Promo p{
+    font-size: 0px;
+    font-weight: 600;
+    font-family: Muli;
+    margin-top: 18px;
+
+  }
+  .nav-container {
+    display: flex;
+    flex-flow:row;
+    margin-left: auto;
+    margin-top: 25px;
+  
+  }
+  .nav-container img {
+    width: 40px;
+    height: 40px;
+    left: 18px;
+    top: -10px;
+    position:relative;
+
+
+  }
+  .user-pic{
+    display: none;
+  width: 0px;
+  height: 0px;
+  margin-right: 40px;
+  }
+  .nav-container p {
+  display: none;
+
+  }
+  }

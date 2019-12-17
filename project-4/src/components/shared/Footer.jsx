@@ -5,6 +5,7 @@ function Footer() {
     return (
         <>
         <div className='foot-container'>
+       
          <h2 className='foot-title'>IN A PINCH</h2>
         <div className='login-about'>
          <p>Login</p>
@@ -26,6 +27,25 @@ function Footer() {
          </div>
         <p className='copyright'>© 2019, In a Pinch</p>
          </div>
+
+
+         
+<div className='second-footer'>
+    <div className='img-container'>
+    <img src=''></img>
+    <img src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png'></img>
+    <img src='http://www.free-icons-download.net/images/solid-heart-shape-icon-75343.png'></img>
+</div>
+
+<div className='words-container'>
+    <p>Home</p>
+    <p>Account</p>
+    <p>Favorites</p>
+    </div>
+
+
+    
+</div>
         </>
     )
 }

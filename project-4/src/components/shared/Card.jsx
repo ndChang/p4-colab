@@ -3,6 +3,7 @@ import './styles/card.css'
 
 
 
+
 const Card = (props) => {
         return (
             <div className="main-card-cont">

@@ -8,6 +8,7 @@ import Nav from "./shared/Nav";
 import Footer from "./shared/Footer";
 import "./shared/styles/container.css";
 
+
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -61,7 +62,6 @@ class Container extends React.Component {
     }
   };
   handleClick = searchTag => {
-    console.log(this.state.searchTags.indexOf(searchTag));
     this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1);
     const searchTags = this.state.searchTags;
     this.setState({
@@ -85,10 +85,10 @@ class Container extends React.Component {
     this.setState({
       searchValue: ""
     });
+    e.target.reset()
   };
 
   render() {
-    console.log("render");
     return (
       <div>
         <Nav />
@@ -101,7 +101,7 @@ class Container extends React.Component {
           />
           {this.renderTag()}
         </div>
-        <Cardcontainer recipe={this.props.recipe} />  
+        <Cardcontainer className="cardContainer" recipes={this.state.recipes} />  
         <Footer />  
       </div>
     );

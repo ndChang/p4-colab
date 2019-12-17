@@ -9,18 +9,23 @@ class Cardcontainer extends Component {
         }
     }
     renderCards = () => {
-        if(this.props.recipes.length) {
-            return this.props.recipes.map((recipe, index) => {
-                return <Card key={ index } recipe={ recipe } />
-            })
+
+        let cards = []
+
+        if(recipes.length) {
+            for(let i = 0; i < 5 ; i++) {
+                console.log(recipes[i].image)
+                cards.push(<Card key={i} image={recipes[i].image} label={recipes[i].label} totalTime={recipes[i].totalTime}/>)
+            }
         }
+        return cards
     }
 
     render() {
         return (
-            <>
+            <div className={this.props.className}>
             { this.renderCards() }
-            </>
+            </div>
         )
     }
 }
