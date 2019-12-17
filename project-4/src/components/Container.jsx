@@ -1,7 +1,6 @@
 import React from "react";
 import Tag from "./shared/Tag";
 import Search from "./Search";
-import Card from "./shared/Card";
 import Nav from "./shared/Nav";
 import Footer from "./shared/Footer";
 import "./shared/styles/container.css";
