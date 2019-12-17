@@ -51,7 +51,6 @@ class Container extends React.Component {
     }
   };
   handleClick = searchTag => {
-    console.log(this.state.searchTags.indexOf(searchTag));
     this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1);
     const searchTags = this.state.searchTags;
     this.setState({
@@ -75,10 +74,10 @@ class Container extends React.Component {
     this.setState({
       searchValue: ""
     });
+    e.target.reset()
   };
 
   render() {
-    console.log("render");
     return (
       <div>
         <Nav />
