@@ -22,9 +22,9 @@ class Cardcontainer extends Component {
 
     render() {
         return (
-            <>
+            <div className={this.props.className}>
             { this.renderCards() }
-            </>
+            </div>
         )
     }
 }
