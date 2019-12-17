@@ -18,7 +18,7 @@ class Container extends React.Component {
   }
 
   loadRecipes = () => {
-    const recipes = ["chicken", "pork", "duck"];
+    const recipes = ["chicken", "pork", "duck", "spag", "beef", "tofu"];
     this.setState(
       {
         recipes: recipes
@@ -37,29 +37,34 @@ class Container extends React.Component {
     if (this.state.searchTags.length) {
       return this.state.searchTags.map(searchTag => {
         if (this.state.recipes.includes(searchTag)) {
-          return <Tag name={searchTag} />;
+          return <Tag name={searchTag} onClick={this.handleClick(searchTag)} />;
         }
       });
     }
+  };
+  handleClick = e => {
+    //   this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag))
   };
   handleChange = e => {
     let searchValue = e.target.value;
     this.setState(
       {
         searchValue
-      },
-      () => console.log(this.state.searchValue)
+      }
     );
   };
 
   handleSubmit = e => {
-      e.preventDefault()
-      let submission = this.state.searchValue
-        this.state.searchTags.push(submission)
-        console.log(this.state.searchTags)
-  }
+    e.preventDefault();
+    let submission = this.state.searchValue;
+    this.state.searchTags.push(submission);
+    this.setState({
+        searchValue:submission
+    })
+  };
 
   render() {
+      console.log("render")
     return (
       <>
         <h1>THIS IS ROOT</h1>
