@@ -6,9 +6,14 @@ const Card = props => {
     <div className="main-card-cont">
       <div className="main-card">
         <img src={props.image} />
-        <div className="quickView">QuickView</div>
-        <div>{props.recipeName}</div>
-        <div>Prep Time: {props.prepTime}</div>
+        <div className="recipeName">{props.recipeName}</div>
+        <div className="recipeDesc">{props.recipeDescription}</div>
+        <div className="prepTime">
+          <strong>Prep Time: </strong> {props.prepTime}
+        </div>
+        <div className="cookTime">
+          <strong>Cook Time: </strong> {props.cookTime}
+        </div>
       </div>
     </div>
   );
