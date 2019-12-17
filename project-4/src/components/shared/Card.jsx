@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-function Card(props) {
+
+class Card extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            recipes: []
+        }
+    }
+    render() {
+        console.log(this.props.recipe)
         return (
             <div className="main">
-            <h4>Hello I am card</h4>
-
-            {props.recipes}
-            {props.image}
+            <img src={this.props.recipe.image} />
+            <div>{this.props.recipe.label}</div>
+            <div>{this.props.recipe.totalTime}</div>
+            <div></div>
             </div>
         )
+    }
     
 }
 export default Card
