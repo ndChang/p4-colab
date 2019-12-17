@@ -1,6 +1,7 @@
 .main-card-cont {
     margin-left: 36px;
     margin-right: 27px;
+    width: fit-content;
 }
 .main-card {
     border: 2px solid black;
@@ -8,4 +9,20 @@
 .main-card-cont .main-card img {
     height: 120px;
     width: 312px;
+}
+
+.quickView{
+    display: none;
+    z-index: 10;
+    margin-top: -51px;
+    height: 51px;
+    background-color: rgba(255, 249, 249, 1);
+    font-size: 16px;
+    position: absolute;
+    width: 312px;
+}
+.main-card-cont:hover .quickView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
