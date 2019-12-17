@@ -1,14 +1,16 @@
-import React, {Component} from 'react'
+import React from 'react'
+import './styles/card.css'
+
 
 
 const Card = (props) => {
-        console.log(props.recipe)
         return (
-            <div className="main">
-            <img src={props.recipe.image} />
-            <div>{props.recipe.label}</div>
-            <div>{props.recipe.totalTime}</div>
-            <div></div>
+            <div className="main-card-cont">
+            <div className="main-card">
+            <img src={this.props.image} />
+            <div>{this.props.recipeName}</div>
+            <div>Prep Time: {props.totalTime}</div>
+            </div>
             </div>
         )
 }

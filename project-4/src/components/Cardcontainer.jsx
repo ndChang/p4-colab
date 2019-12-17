@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Card from './shared/Card'
-import recipes from '../data/recipes.json'
+// import recipes from '../data/recipes.json'
 
 class Cardcontainer extends Component {
     constructor(props) {
@@ -9,8 +9,8 @@ class Cardcontainer extends Component {
         }
     }
     renderCards = () => {
-        if(recipes.length) {
-            return recipes.map((recipe, index) => {
+        if(this.props.recipes.length) {
+            return this.props.recipes.map((recipe, index) => {
                 return <Card key={ index } recipe={ recipe } />
             })
         }
