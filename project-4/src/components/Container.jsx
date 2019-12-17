@@ -1,11 +1,11 @@
-import React from 'react'
-import Tag from './shared/Tag'
-import Search from './Search'
-import Card from './shared/Card'
-import Cardcontainer from './Cardcontainer'
-import Nav from './shared/Nav'
-import Footer from './shared/Footer'
-import './shared/styles/container.css'
+import React from "react";
+import Tag from "./shared/Tag";
+import Search from "./Search";
+import Card from "./shared/Card";
+import Cardcontainer from "./Cardcontainer";
+import Nav from "./shared/Nav";
+import Footer from "./shared/Footer";
+import "./shared/styles/container.css";
 
 class Container extends React.Component {
   constructor(props) {
@@ -80,10 +80,8 @@ class Container extends React.Component {
   render() {
     console.log("render");
     return (
-      <>
-      <Nav/>
-        <h1>THIS IS ROOT</h1>
-        <Cardcontainer recipes={ this.state.recipes } />
+      <div>
+        <Nav />
         <div className="flex">
           <Search
             onChange={this.handleChange}
@@ -91,12 +89,12 @@ class Container extends React.Component {
             onSubmit={this.handleSubmit}
             text="Search by recipe, ingredient, cuisine"
           />
-        <div>{this.renderTag()}</div>
-        <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
-        <Footer/>
-
-      </>
+          {this.renderTag()}
+        </div>
+        <Cardcontainer recipes={this.state.recipes} />  
+        <Footer />  
+      </div>
     );
   }
 }
-export default Container
+export default Container;
