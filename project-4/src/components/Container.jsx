@@ -4,6 +4,7 @@ import Search from './Search'
 import Card from './shared/Card'
 import Nav from './shared/Nav'
 import Footer from './shared/Footer'
+import './shared/styles/container.css'
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +38,7 @@ class Container extends React.Component {
   renderTag = () => {
     if (this.state.searchTags.length) {
       return this.state.searchTags.map(searchTag => {
-          return <Tag name={searchTag} onClick={() => this.handleClick(searchTag)} />;
+          return <Tag className="snack" name={`${searchTag} X`} onClick={() => this.handleClick(searchTag)} />;
       });
     }
   };
@@ -60,10 +61,13 @@ class Container extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if(this.state.searchValue.length === 0) {
+        return
+    }
     let submission = this.state.searchValue;
     this.state.searchTags.push(submission);
     this.setState({
-        searchValue:submission
+        searchValue: ''
     })
   };
 
@@ -74,7 +78,7 @@ class Container extends React.Component {
       <Nav/>
         <h1>THIS IS ROOT</h1>
         <div>{this.renderTag()}</div>
-        <Search onChange={this.handleChange} onSubmit={this.handleSubmit} />
+        <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
         <Card />
         <Footer/>
       </>
