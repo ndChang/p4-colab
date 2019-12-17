@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+form{
+    border: 1px solid #525757;
+    width: 617px;
+    height: 49px;
+    border-radius: 20px;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Quicksand";
+}
+
+
 input{
-    border:1px solid black;
+    width: 439px;
+    height: 24px;
+    border: none;
+    font-weight: bold;
 }
