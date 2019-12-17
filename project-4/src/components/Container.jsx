@@ -29,7 +29,7 @@ class Container extends React.Component {
   };
 
   setTag = () => {
-    const recipes = ["chicken", "beef", "pork", "duck"];
+    const recipes = [];
     this.setState({
       searchTags: recipes
     });
@@ -37,14 +37,17 @@ class Container extends React.Component {
   renderTag = () => {
     if (this.state.searchTags.length) {
       return this.state.searchTags.map(searchTag => {
-        // if (this.state.recipes.includes(searchTag)) {
-          return <Tag name={searchTag} onClick={this.handleClick(searchTag)} />;
-        // }
+          return <Tag name={searchTag} onClick={() => this.handleClick(searchTag)} />;
       });
     }
   };
-  handleClick = e => {
-    //   this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag))
+  handleClick = searchTag => {
+      console.log(this.state.searchTags.indexOf(searchTag))
+        this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1)
+        const searchTags = this.state.searchTags
+      this.setState({
+          searchTags: searchTags
+      })
   };
   handleChange = e => {
     let searchValue = e.target.value;
