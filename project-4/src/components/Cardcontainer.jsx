@@ -16,7 +16,7 @@ class Cardcontainer extends Component {
         if(recipes.length) {
             for(let i = 0; i < 5 ; i++) {
                 console.log(recipes[i].image)
-                cards.push(<Card key={i} image={recipes[i].image} label={recipes[i].recipeName} totalTime={recipes[i].totalTime}/>)
+                cards.push(<Card key={i} image={recipes[i].image} recipeName={recipes[i].recipeName} recipeDescription={recipes[i].recipeDescription} prepTime={recipes[i].prepTime} cookTime={recipes[i].cookTime} />)
             }
         }
         return cards
