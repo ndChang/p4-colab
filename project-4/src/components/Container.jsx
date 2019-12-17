@@ -1,6 +1,7 @@
-import React from "react";
-import Tag from "./Tag";
-import Search from "./Search";
+import React from 'react'
+import Tag from './Tag'
+import Search from './Search'
+import Card from './Card'
 
 class Container extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class Container extends React.Component {
         <h1>THIS IS ROOT</h1>
         <div>{this.renderTag()}</div>
         <Search onChange={this.handleChange} onSubmit={this.handleSubmit} />
+        <Card />
       </>
     );
   }
