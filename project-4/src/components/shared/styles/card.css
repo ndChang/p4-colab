@@ -46,13 +46,12 @@
 
 .quickView{
     display: none;
-    z-index: 10;
     margin-top: -51px;
     height: 51px;
     background-color: rgba(255, 249, 249, 1);
     font-size: 16px;
     position: absolute;
-    width: 312px;
+    width: 435.8px;
 }
 .main-card-cont:hover .quickView {
     display: flex;
