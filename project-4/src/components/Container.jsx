@@ -1,7 +1,6 @@
 import React from "react";
 import Tag from "./shared/Tag";
 import Search from "./Search";
-import Card from "./shared/Card";
 import axios from 'axios';
 import Cardcontainer from "./Cardcontainer";
 import Nav from "./shared/Nav";
@@ -19,7 +18,6 @@ class Container extends React.Component {
     };
   }
   componentDidMount() {
-    this.loadRecipes();
     this.setTag();
     this.fetchData();
   }
@@ -28,19 +26,9 @@ class Container extends React.Component {
     const food = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes`)
 
     this.setState({
-        recipes: [...food.data]
-    })
+        recipes: food.data
+    }, () => console.log(this.state.recipes,"look") )
   }
-
-  loadRecipes = () => {
-    const recipes = ["chicken", "pork", "duck", "spag", "beef", "tofu"];
-    this.setState(
-      {
-        recipes: recipes
-      },
-      () => console.log(this.state.recipes)
-    );
-  };
 
   setTag = () => {
     const recipes = [];
@@ -101,7 +89,7 @@ class Container extends React.Component {
           />
           {this.renderTag()}
         </div>
-        <Cardcontainer className="cardContainer" recipes={this. state.recipes} />  
+        <Cardcontainer className="cardContainer" recipe={this.state.recipes} />  
         <Footer />  
       </div>
     );
