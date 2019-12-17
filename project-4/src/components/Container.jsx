@@ -2,6 +2,7 @@ import React from "react";
 import Tag from "./shared/Tag";
 import Search from "./Search";
 import Card from "./shared/Card";
+import Cardcontainer from "./Cardcontainer";
 import Nav from "./shared/Nav";
 import Footer from "./shared/Footer";
 import "./shared/styles/container.css";
@@ -79,7 +80,7 @@ class Container extends React.Component {
   render() {
     console.log("render");
     return (
-      <>
+      <div>
         <Nav />
         <div className="flex">
           <Search
@@ -90,10 +91,9 @@ class Container extends React.Component {
           />
           {this.renderTag()}
         </div>
-        <Card />
-        <Footer />
-
-      </>
+        <Cardcontainer recipes={this.state.recipes} />  
+        <Footer />  
+      </div>
     );
   }
 }
