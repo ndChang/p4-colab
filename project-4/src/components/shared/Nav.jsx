@@ -5,14 +5,16 @@ function Nav() {
         <>
             <div className='nav'>
 
-                <h1 className='site-title'>Meal Plan</h1>
+                <h1 className='site-title'>IN A PINCH</h1>
             <div className='nav-container'>
                 <img src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png' alt='user picture'></img>
-                <p>About</p>
+                <p>ABOUT</p>
                 <img src='https://www.searchpng.com/wp-content/uploads/2019/02/Shopping-Cart-PNG-Icon-715x715.png' alt='shopping cart'></img>
                 </div>
             </div>
-            <div className='Promo'>Promo: Free Shipping on first five orders</div>
+            <div className='Promo'>
+                <p>GET YOUR FIRST 5 DELIVERIES FREE WITH CODE PINCH19</p>
+                </div>
         </>
     )
 }
