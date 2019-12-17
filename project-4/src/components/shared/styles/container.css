@@ -5,6 +5,10 @@
     font-size: 20px;
 }
 
-.flex{
+/* .flex{
     display: flex;
+} */
+
+.cardContainer {
+ margin-bottom: 170px;   
 }

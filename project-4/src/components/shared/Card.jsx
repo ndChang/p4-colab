@@ -1,16 +1,14 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
 
+const Card = props => {
+  return (
+    <div className="main">
+      <img src={props.image} />
+      <div>{props.label}</div>
+      <div>{props.totalTime}</div>
+      <div></div>
+    </div>
+  );
+};
 
-const Card = (props) => {
-        console.log(props.recipe)
-        return (
-            <div className="main">
-            <img src={props.recipe.image} />
-            <div>{props.recipe.label}</div>
-            <div>{props.recipe.totalTime}</div>
-            <div></div>
-            </div>
-        )
-}
-    
-export default Card
+export default Card;
