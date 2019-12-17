@@ -19,7 +19,7 @@ input{
     font-weight: bold;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (max-width: 420px) {
     form{
         width: 400px;
         height: 30px;
