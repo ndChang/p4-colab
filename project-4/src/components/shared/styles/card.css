@@ -1,0 +1,11 @@
+.main-card-cont {
+    margin-left: 36px;
+    margin-right: 27px;
+}
+.main-card {
+    border: 2px solid black;
+}
+.main-card-cont .main-card img {
+    height: 120px;
+    width: 312px;
+}

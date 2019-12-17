@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Card from './shared/Card'
-import recipes from '../data/recipes.json'
+// import recipes from '../data/recipes.json'
 
 class Cardcontainer extends Component {
     constructor(props) {
@@ -9,6 +9,7 @@ class Cardcontainer extends Component {
         }
     }
     renderCards = () => {
+
         let cards = []
 
         if(recipes.length) {
