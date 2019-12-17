@@ -1,11 +1,12 @@
-import React from 'react'
-import Tag from './shared/Tag'
-import Search from './Search'
-import Card from './shared/Card'
-import Cardcontainer from './Cardcontainer'
-import Nav from './shared/Nav'
-import Footer from './shared/Footer'
-import './shared/styles/container.css'
+import React from "react";
+import Tag from "./shared/Tag";
+import Search from "./Search";
+import Card from "./shared/Card";
+import Cardcontainer from "./Cardcontainer";
+import Nav from "./shared/Nav";
+import Footer from "./shared/Footer";
+import "./shared/styles/container.css";
+
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +51,6 @@ class Container extends React.Component {
     }
   };
   handleClick = searchTag => {
-    console.log(this.state.searchTags.indexOf(searchTag));
     this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1);
     const searchTags = this.state.searchTags;
     this.setState({
@@ -74,22 +74,26 @@ class Container extends React.Component {
     this.setState({
       searchValue: ""
     });
+    e.target.reset()
   };
 
   render() {
-    console.log("render");
     return (
-      <>
-      <Nav/>
-        <h1>THIS IS ROOT</h1>
-        <div>{ this.renderTag() }</div>
-        <Search onChange={ this.handleChange } onSubmit={ this.handleSubmit } />
-        <Cardcontainer recipes={ this.state.recipes } />
-        <div>{this.renderTag()}</div>
-        <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
-        <Footer/>
-      </>
+      <div>
+        <Nav />
+        <div className="flex">
+          <Search
+            onChange={this.handleChange}
+            alt="Search icon"
+            onSubmit={this.handleSubmit}
+            text="Search by recipe, ingredient, cuisine"
+          />
+          {this.renderTag()}
+        </div>
+        <Cardcontainer className="cardContainer" recipes={this.state.recipes} />  
+        <Footer />  
+      </div>
     );
   }
 }
-export default Container
+export default Container;
