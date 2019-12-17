@@ -1,8 +1,15 @@
 import React from 'react'
-import Tag from './Tag'
+import Tag from './shared/Tag'
 import Search from './Search'
+<<<<<<< HEAD
 import Cardcontainer from './Cardcontainer'
 
+=======
+import Card from './shared/Card'
+import Nav from './shared/Nav'
+import Footer from './shared/Footer'
+import './shared/styles/container.css'
+>>>>>>> 4b46061f2d1c15ec48382b5d4ce6385f171bfca1
 class Container extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +35,7 @@ class Container extends React.Component {
   };
 
   setTag = () => {
-    const recipes = ["chicken", "beef", "pork", "duck"];
+    const recipes = [];
     this.setState({
       searchTags: recipes
     });
@@ -36,14 +43,17 @@ class Container extends React.Component {
   renderTag = () => {
     if (this.state.searchTags.length) {
       return this.state.searchTags.map(searchTag => {
-        if (this.state.recipes.includes(searchTag)) {
-          return <Tag name={searchTag} onClick={this.handleClick(searchTag)} />;
-        }
+          return <Tag className="snack" name={`${searchTag} X`} onClick={() => this.handleClick(searchTag)} />;
       });
     }
   };
-  handleClick = e => {
-    //   this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag))
+  handleClick = searchTag => {
+      console.log(this.state.searchTags.indexOf(searchTag))
+        this.state.searchTags.splice(this.state.searchTags.indexOf(searchTag), 1)
+        const searchTags = this.state.searchTags
+      this.setState({
+          searchTags: searchTags
+      })
   };
   handleChange = e => {
     let searchValue = e.target.value;
@@ -56,10 +66,13 @@ class Container extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if(this.state.searchValue.length === 0) {
+        return
+    }
     let submission = this.state.searchValue;
     this.state.searchTags.push(submission);
     this.setState({
-        searchValue:submission
+        searchValue: ''
     })
   };
 
@@ -67,10 +80,18 @@ class Container extends React.Component {
       console.log("render")
     return (
       <>
+      <Nav/>
         <h1>THIS IS ROOT</h1>
+<<<<<<< HEAD
         <div>{ this.renderTag() }</div>
         <Search onChange={ this.handleChange } onSubmit={ this.handleSubmit } />
         <Cardcontainer recipes={ this.state.recipes } />
+=======
+        <div>{this.renderTag()}</div>
+        <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
+        <Card />
+        <Footer/>
+>>>>>>> 4b46061f2d1c15ec48382b5d4ce6385f171bfca1
       </>
     );
   }
