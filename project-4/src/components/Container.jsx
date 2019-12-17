@@ -1,7 +1,7 @@
 import React from 'react'
 import Tag from './Tag'
 import Search from './Search'
-import Card from './Card'
+import Cardcontainer from './Cardcontainer'
 
 class Container extends React.Component {
   constructor(props) {
@@ -68,9 +68,9 @@ class Container extends React.Component {
     return (
       <>
         <h1>THIS IS ROOT</h1>
-        <div>{this.renderTag()}</div>
-        <Search onChange={this.handleChange} onSubmit={this.handleSubmit} />
-        <Card />
+        <div>{ this.renderTag() }</div>
+        <Search onChange={ this.handleChange } onSubmit={ this.handleSubmit } />
+        <Cardcontainer recipes={ this.state.recipes } />
       </>
     );
   }
