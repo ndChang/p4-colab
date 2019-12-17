@@ -1,12 +1,14 @@
 import React from "react";
 import Tag from "./Tag";
+import Search from "./Search";
 
 class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       recipes: [],
-      searchTags: []
+      searchTags: [],
+      searchValue: ""
     };
   }
   componentDidMount() {
@@ -26,30 +28,42 @@ class Container extends React.Component {
 
   setTag = () => {
     const recipes = ["chicken", "beef", "pork", "duck"];
-    this.setState(
-      {
-        searchTags: recipes
-      },
-      () => console.log(this.state.searchTags)
-    );
+    this.setState({
+      searchTags: recipes
+    });
   };
   renderTag = () => {
-      if(this.state.searchTags.length){
-        return  this.state.searchTags.map(searchTag => {
-            if(this.state.recipes.includes(searchTag)){
-                console.log("tag has been rendered", searchTag)
-                return <Tag name={searchTag} />
-            }
-        })
-      }
- 
+    if (this.state.searchTags.length) {
+      return this.state.searchTags.map(searchTag => {
+        if (this.state.recipes.includes(searchTag)) {
+          return <Tag name={searchTag} />;
+        }
+      });
+    }
   };
+  handleChange = e => {
+    let searchValue = e.target.value;
+    this.setState(
+      {
+        searchValue
+      },
+      () => console.log(this.state.searchValue)
+    );
+  };
+
+  handleSubmit = e => {
+      e.preventDefault()
+      let submission = this.state.searchValue
+        this.state.searchTags.push(submission)
+        console.log(this.state.searchTags)
+  }
 
   render() {
     return (
       <>
         <h1>THIS IS ROOT</h1>
         <div>{this.renderTag()}</div>
+        <Search onChange={this.handleChange} onSubmit={this.handleSubmit} />
       </>
     );
   }
