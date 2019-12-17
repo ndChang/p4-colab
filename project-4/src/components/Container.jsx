@@ -101,7 +101,7 @@ class Container extends React.Component {
           />
           {this.renderTag()}
         </div>
-        <Cardcontainer className="cardContainer" recipes={this.state.recipes} />  
+        <Cardcontainer className="cardContainer" recipes={this. state.recipes} />  
         <Footer />  
       </div>
     );
