@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Tag(props) {
-return <button>{props.name}</button>
+return <button onClick={props.onClick}>{props.name}</button>
 } 
 
 export default Tag
