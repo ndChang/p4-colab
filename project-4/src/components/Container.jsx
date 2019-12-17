@@ -76,7 +76,6 @@ class Container extends React.Component {
     return (
       <>
       <Nav/>
-        <h1>THIS IS ROOT</h1>
         <div>{this.renderTag()}</div>
         <Search onChange={this.handleChange} alt='Search icon' onSubmit={this.handleSubmit} text="Search by recipe, ingredient, cuisine"/>
         <Card />
