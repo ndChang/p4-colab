@@ -14,7 +14,7 @@
 
 .cardContainer {
   display: flex;
-  margin-bottom: 170px;
+  /* margin-bottom: 170px; */
   margin-left: 55px;
   margin-right: 40px;
   flex-flow: wrap row;

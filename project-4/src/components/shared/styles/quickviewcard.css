@@ -2,12 +2,19 @@
     margin-right: 15px;
     position: absolute;
     z-index: 50;
-    background-color: rgba(0, 0, 0, 0.062)
+    background-color: rgba(0, 0, 0, 0.87);
+    width:100vw;
+    height: 100vh;
+    max-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 .quick-card{
+
     width: 698px;
     height: 611px;
 }

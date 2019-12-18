@@ -4,9 +4,6 @@ import './styles/quickviewcard.css'
 const QuickViewCard = props => {
 
 
-
-
-
   return (
       
     <div className="quick-view-cont">
@@ -15,9 +12,6 @@ const QuickViewCard = props => {
         <img src={props.image} />
         <div className="recipeName">{props.recipeName}</div>
         <div className="recipeDesc">{props.recipeDescription}</div>
-
-
-
         <div className="prepTime">
           <strong>Prep Time: </strong> {props.prepTime}
         </div>
