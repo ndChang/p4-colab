@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/footer.css'
+import homeIcon from '../shared/styles/images/homeIcon.png'
 
 function Footer() {
     return (
@@ -28,19 +29,18 @@ function Footer() {
         <p className='copyright'>© 2019, In a Pinch</p>
          </div>
 
-
          
 <div className='second-footer'>
     <div className='img-container'>
-    <img src=''></img>
+    <img src= {homeIcon}></img>
     <img src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png'></img>
-    <img src='http://www.free-icons-download.net/images/solid-heart-shape-icon-75343.png'></img>
+    <img className='heart-icon' src='http://www.free-icons-download.net/images/solid-heart-shape-icon-75343.png'></img>
 </div>
 
 <div className='words-container'>
     <p>Home</p>
     <p>Account</p>
-    <p>Favorites</p>
+    <p > Favorites</p>
     </div>
 
 

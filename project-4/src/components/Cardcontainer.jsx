@@ -21,12 +21,16 @@ class Cardcontainer extends Component {
         }
         return cards
     }
+
+    renderModal = (modal) =>{
+         
+    }
     componentDidMount() {
         this.fetchData();
       }
     
       fetchData = async () => {
-        const food = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes`)
+        const food = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes/`)
     
         this.setState({
             recipes: food.data
@@ -35,9 +39,12 @@ class Cardcontainer extends Component {
 
     render() {
         return (
+            <>
+            <h4 className='ten-min'>10 minutes</h4>
             <div className={this.props.className}>
-            { this.renderCards() }
+            { this.renderCards([]) }
             </div>
+            </>
         )
     }
 }

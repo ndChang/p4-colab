@@ -1,20 +1,23 @@
 .main-card-cont {
-    margin-left: 36px;
-    margin-right: 27px;
+    margin-right: 15px;
     width: fit-content;
     display: inline-flex;
 }
 .main-card {
-    width: 436px;
+    width: 385px;
     height: 340px;
     border: 2px solid #6c5959;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .main-card-cont .main-card img {
-    width: 431.8px;
-    height: 238px;
-    border: 2px solid #6c5959;
+    width: 385px;
+    height: 241px;
+    border-bottom: #6c5959 2px;
+    border-top: #6c5959 2px;
+    margin-top: -1px;
+    position: relative;
+  
 }
 
 .main-card-cont .main-card .recipeName {
@@ -23,13 +26,16 @@
     height: 25px;
     font-weight: bold;
     font-size: 20px;
+    text-align:left;
 }
 
 .main-card-cont .main-card .recipeDesc {
-    width: 252px;
+    width: 300px;
     height: 18px;
     font-size: 14px;
     font-family: 'Quicksand';
+    text-align:left;
+
 }
 
 .main-card-cont .main-card .prepTime {
@@ -37,12 +43,18 @@
     height: 22px;
     font-family: 'Quicksand';
     font-weight: bold;
+    text-align:left;
+    margin-top: 4px;
+
+
 }
 .main-card-cont .main-card .cookTime {
     width: 138px;
     height: 22px;
     font-family: 'Quicksand';
     font-weight: bold;
+    text-align:left;
+
 }
 
 
@@ -53,10 +65,98 @@
     background-color: rgba(255, 249, 249, 1);
     font-size: 16px;
     position: absolute;
-    width: 435.8px;
+    width: 385px;
 }
 .main-card-cont:hover .quickView {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
+@media screen and (max-width: 420px) { 
+
+    .main-card {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 385px;
+        height: 290px;
+        border: 2px solid #6c5959;
+        margin-bottom: 10px;
+    }
+    .main-card-cont .main-card img {
+        width: 385px;
+        height: 241px;
+        border-bottom: #6c5959 2px;
+        border-top: #6c5959 2px;
+        margin-top: -1px;
+        position: relative;
+      
+    }
+    
+    .main-card-cont .main-card .recipeName {
+        font-family: 'Muli';
+        width: 381px;
+        height: 25px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align:left;
+        margin-left: 2px;
+    }
+    
+    .main-card-cont .main-card .recipeDesc {
+        width: 300px;
+        height: 18px;
+        font-size: 14px;
+        font-family: 'Quicksand';
+        text-align:left;
+        margin-left: 2px;
+
+    
+    }
+    
+    .main-card-cont .main-card .prepTime {
+        width: 138px;
+        height: 22px;
+        font-family: 'Quicksand';
+        font-weight: bold;
+        text-align:left;
+        margin-top: 4px;
+        margin-left: 2px;
+        display: none;
+
+    
+    
+    }
+    .main-card-cont .main-card .cookTime {
+        width: 138px;
+        height: 22px;
+        font-family: 'Quicksand';
+        font-weight: bold;
+        text-align:left;
+        margin-left: 2px;
+        display: none;
+
+    
+    }
+    
+    
+    .quickView{
+        display: none;
+        margin-top: -51px;
+        height: 51px;
+        background-color: rgba(255, 249, 249, 1);
+        font-size: 16px;
+        position: absolute;
+        width: 385px;
+    }
+    .main-card-cont:hover .quickView {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-card-cont:hover .quickView {
+        display: none;
+    }
+    }
+    
