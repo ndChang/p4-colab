@@ -83,6 +83,7 @@ class Container extends React.Component {
         <div className="flex">
           <Search
             onChange={this.handleChange}
+            src="https://i.imgur.com/HqPHNNi.png"
             alt="Search icon"
             onSubmit={this.handleSubmit}
             text="Search by recipe, ingredient, cuisine"
