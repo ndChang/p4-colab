@@ -15,10 +15,31 @@
 
 
 .quick-card{
-
+    background: white;
+    display: flex;
+    flex-direction: column;
     width: 698px;
     height: 611px;
+    padding: 20px 42px;
 }
+.close-modal{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -20px;    
+}
+
+.quick-view-recipe-main{
+    display: flex;
+}
+
+.quick-view-recipe-main-left{
+    width: 346px;
+}
+.quick-view-recipe-main-left img{
+    width: 100%;
+}
+
+
 .recipeName{}
 .recipeDesc{}
 
