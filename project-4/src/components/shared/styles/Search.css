@@ -22,18 +22,20 @@ input{
     font-weight: bold;
 }
 
-.search-icon{
+.search-icon {
     width: 24px;
     margin-right: 1px;
 }
 
-@media screen and (max-width: 420px) {
-    form{
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
+    form {
         width: 400px;
         height: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+    .search-icon {
+        width: 18px;
     }
     input{
         width:330px;
