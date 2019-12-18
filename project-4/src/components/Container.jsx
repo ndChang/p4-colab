@@ -6,6 +6,7 @@ import Cardcontainer from "./Cardcontainer";
 import Nav from "./shared/Nav";
 import Footer from "./shared/Footer";
 import "./shared/styles/container.css";
+import QuickViewCard from "./shared/QuickViewCard";
 
 
 class Container extends React.Component {

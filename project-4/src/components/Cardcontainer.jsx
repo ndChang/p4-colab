@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import Card from './shared/Card'
+import QuickViewCard from './shared/QuickViewCard'
 
 class Cardcontainer extends Component {
     constructor(props) {
@@ -17,7 +18,9 @@ class Cardcontainer extends Component {
             for(let i = 0; i < 5 ; i++) {
                 console.log(recipes[i].image)
                 cards.push(<Card key={i} image={recipes[i].image} recipeName={recipes[i].recipeName} recipeDescription={recipes[i].recipeDescription} prepTime={recipes[i].prepTime} cookTime={recipes[i].cookTime} />)
+                cards.push(<QuickViewCard key={i} image={recipes[i].image} recipeName={recipes[i].recipeName} recipeDescription={recipes[i].recipeDescription} prepTime={recipes[i].prepTime} cookTime={recipes[i].cookTime} />)
             }
+
         }
         return cards
     }
@@ -42,7 +45,7 @@ class Cardcontainer extends Component {
             <>
             <h4 className='ten-min'>10 minutes</h4>
             <div className={this.props.className}>
-            { this.renderCards([]) }
+            { this.renderCards() }
             </div>
             </>
         )
