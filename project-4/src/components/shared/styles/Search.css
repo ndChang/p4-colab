@@ -1,43 +1,45 @@
-form{
+form {
     border: 1px solid #525757;
     width: 617px;
     height: 40px;
     border-radius: 20px;
     font-size: 19px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-family: "Quicksand";
-    margin-left: 57px;
+    margin-left: 31%;
     margin-top: 25px;
-    margin-right: 0px;
     flex-flow: row;
 }
-
 
 input{
     width: 560px;
     height: 24px;
+    margin-left: 10px;
     border: none;
     font-weight: bold;
 }
 
-.search-icon{
+.search-icon {
     width: 24px;
-    margin-right: 1px;
+    margin-left: 5px;
 }
 
-@media screen and (max-width: 420px) {
-    form{
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
+    form {
         width: 400px;
         height: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+    .search-icon {
+        width: 18px;
     }
     input{
         width:330px;
     }
+    
     .snack{
         margin: 10px;
         margin-top: 10px;
