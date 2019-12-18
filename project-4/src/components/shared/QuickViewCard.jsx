@@ -5,6 +5,7 @@ const QuickViewCard = props => {
   return (
     <div className="quick-view-cont">
       <div className="quick-card">
+
         <div className="close-modal">
           <button onClick={() => props.onClick()}>close</button>
         </div>
@@ -16,12 +17,17 @@ const QuickViewCard = props => {
           </div>
           <div className="quick-view-recipe-main-right">
             <div className="prepTime">
+          <img src="https://i.imgur.com/BNM27qD.png" />
+              
               <strong>Prep Time: </strong> {props.prepTime}
             </div>
             <div className="cookTime">
+          <img src="https://i.imgur.com/BNM27qD.png" />
+              
               <strong>Cook Time: </strong> {props.cookTime}
             </div>
           </div>
+
         </div>
       </div>
     </div>
