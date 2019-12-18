@@ -3,7 +3,7 @@ import './styles/quickviewcard.css'
 
 const QuickViewCard = props => {
 
-    
+
 
 
 
@@ -11,6 +11,7 @@ const QuickViewCard = props => {
       
     <div className="quick-view-cont">
       <div className="quick-card">
+          <button onClick={ () => props.onClick()}>close</button>
         <img src={props.image} />
         <div className="recipeName">{props.recipeName}</div>
         <div className="recipeDesc">{props.recipeDescription}</div>

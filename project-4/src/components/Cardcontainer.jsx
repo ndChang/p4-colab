@@ -1,54 +1,111 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import Card from './shared/Card'
 import QuickViewCard from './shared/QuickViewCard'
 
 class Cardcontainer extends Component {
     constructor(props) {
-        super(props)
-        this.state = { 
-            recipes: []
-        }
+        super(props);
+        this.state = {
+            recipes: [],
+            showOverlay: false,
+            qView: {}
+        };
     }
+
+    handleClick = (qView) => {
+        //   console.log(<QuickViewCard/>)
+        this.setState({
+            qView: qView,
+        })
+        this.toggleOverlay()
+    }
+    toggleOverlay = () => {
+        this.setState(state => ({
+            showOverlay: !state.showOverlay
+        }))
+    }
+    renderOverlay = () => {
+        while(this.state.showOverlay) {
+            const qView = this.state.qView
+        return <QuickViewCard
+            onClick={this.toggleOverlay}
+            image={qView.image}
+            recipeName={qView.recipeName}
+            recipeDescription={qView.recipeDescription}
+            prepTime={qView.prepTime}
+            cookTime={qView.cookTime}
+        />
+    }
+    }
+
     renderCards = () => {
-        let { recipes } = this.state
-        let cards = []
+        let { recipes } = this.state;
+        let cardsAt10 = [];
+        let cardsAbove10 = [];
+        if (recipes.length) {
+            { this.renderOverlay() }
+            for (let i = 0; i < 5; i++) {
+                console.log(
+                    "prep time for recipe is: ",
+                    recipes[i].cookTime + recipes[i].cookTime
+                );
+                let time = recipes[i].cookTime + recipes[i].cookTime;
+                if (time <= 10) {
+                    cardsAt10.push(
+                        <Card
+                            key={i}
+                            image={recipes[i].image}
+                            recipeName={recipes[i].recipeName}
+                            recipeDescription={recipes[i].recipeDescription}
+                            prepTime={recipes[i].prepTime}
+                            cookTime={recipes[i].cookTime}
 
-        if(recipes.length) {
-            for(let i = 0; i < 5 ; i++) {
-                console.log(recipes[i].image)
-                cards.push(<Card key={i} image={recipes[i].image} recipeName={recipes[i].recipeName} recipeDescription={recipes[i].recipeDescription} prepTime={recipes[i].prepTime} cookTime={recipes[i].cookTime} />)
-                cards.push(<QuickViewCard key={i} image={recipes[i].image} recipeName={recipes[i].recipeName} recipeDescription={recipes[i].recipeDescription} prepTime={recipes[i].prepTime} cookTime={recipes[i].cookTime} />)
+                            onClick={() => { this.handleClick(recipes[i]) }}
+                        />
+                    );
+                } else {
+                    cardsAbove10.push(
+                        <Card
+                            key={i}
+                            image={recipes[i].image}
+                            recipeName={recipes[i].recipeName}
+                            recipeDescription={recipes[i].recipeDescription}
+                            prepTime={recipes[i].prepTime}
+                            cookTime={recipes[i].cookTime}
+                            onClick={() => this.handleClick(recipes[i])}
+                        />
+                    );
+                }
             }
-
         }
-        return cards
+        return [
+            <h4 className="ten-min">10 minutes</h4>,
+            <div className={this.props.className}>{cardsAt10}</div>,
+            <h4 className="ten-min">15 minutes</h4>,
+            <div className={this.props.className}>{cardsAbove10}</div>
+        ]
     }
 
-    renderModal = (modal) =>{
-         
-    }
+    // renderModal = modal => { };
     componentDidMount() {
         this.fetchData();
-      }
-    
-      fetchData = async () => {
-        const food = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes/`)
-    
+    }
+
+    fetchData = async () => {
+        const food = await axios.get(
+            `https://5dced59675f9360014c2642c.mockapi.io/recipes/`
+        );
+
         this.setState({
             recipes: food.data
-        }, () => console.log(this.state.recipes,"look") )
-      }
+        });
+    };
 
     render() {
-        return (
-            <>
-            <h4 className='ten-min'>10 minutes</h4>
-            <div className={this.props.className}>
-            { this.renderCards() }
-            </div>
-            </>
-        )
+        return <>
+        {this.renderOverlay()}
+        {this.renderCards([])}</>;
     }
 }
-export default Cardcontainer
+export default Cardcontainer;
