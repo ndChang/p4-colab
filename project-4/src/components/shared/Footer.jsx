@@ -28,7 +28,6 @@ function Footer() {
         <p className='copyright'>© 2019, In a Pinch</p>
          </div>
 
-
          
 <div className='second-footer'>
     <div className='img-container'>
