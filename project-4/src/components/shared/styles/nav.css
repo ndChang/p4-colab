@@ -5,40 +5,46 @@
   display: flex;
 
   }
+  .line-bar img {
+      display :none;
+      width: 25px;
+      height: 23px;
+      margin-left: 35px;
+      margin-top: 22px;
+  }
+
   .cart-counter{
     background-color: #f8c446;
     width: 13px;
     height: 13px;
     border-radius: 250px;
-    position: relative;
-    left: 1258px;
-    top: 8px;
+    margin-right: 20px;
+    margin-left: 170px;
+    position: absolute;
   }
   .nav-container {
     display: flex;
     flex-flow:row;
     margin-left: auto;
     margin-top: 25px;
-  
   }
+
   .nav-container img {
   width: 25px;
   height: 25px;
   margin-right: 40px;
   }
+
   .nav-container p {
-    width: 50px;
+  width: 50px;
   margin-right: 40px;
   font-family: Muli;
   line-height: 26px;
   margin-top: 0px;
-  letter-spacing: normal;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-
   }
-  .Promo{
+
+  .Promo {
     background-color: #151515;
     color: white;
     height: 64px;
@@ -47,19 +53,15 @@
     display: flex;
 
   }
-  .Promo p{
+  .Promo p {
     font-size: 24px;
     font-weight: 600;
     font-family: Muli;
     margin-top: 18px;
-
   }
-  .site-title{
-      font-family: Muli;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
+
+  .site-title h1 {
+      font-family: 'Muli';
       font-size: 60px;
       color: #1a1916;
       margin: 0;
@@ -71,22 +73,14 @@
   }
   
 
-  @media screen and (max-width: 420px) {
+  @media only screen and (min-device-width: 375px) and (max-device-height: 812px) {
     .nav{
       height: 80px;
     }
-    .site-title{
-      font-family: Muli;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
+    .nav .site-title h1 {
+      font-family: 'Muli';
       font-size: 25px;
       font-weight: 800;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
       color: #1a1916;
       margin: 0;
       position: absolute;
@@ -118,17 +112,25 @@
     margin-top: 25px;
   
   }
-  .nav-container img {
+  .nav-container .icon-1 {
+    width: 40px;
+    height: 40px;
+    left: 18px;
+    top: -10px;
+    position:relative;
+    display: none;
+  }
+
+  .nav-container .icon-2 {
     width: 40px;
     height: 40px;
     left: 18px;
     top: -10px;
     position:relative;
 
-
   }
   .user-pic{
-    display: none;
+  display: none;
   width: 0px;
   height: 0px;
   margin-right: 40px;
@@ -146,5 +148,12 @@
     position: relative;
     left: 380px;
     top: 8px;
+  }
+  .line-bar img {
+    display: block;
+    width: 25px;
+    height: 23px;
+    margin-left: 35px;
+    margin-top: 22px;
   }
   }

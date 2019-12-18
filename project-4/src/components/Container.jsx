@@ -27,8 +27,8 @@ class Container extends React.Component {
     const food = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes`)
 
     this.setState({
-        recipes: food.data
-    }, () => console.log(this.state.recipes,"look") )
+      recipes: food.data
+    }, () => console.log(this.state.recipes, "look"))
   }
 
   setTag = () => {
@@ -91,9 +91,11 @@ class Container extends React.Component {
           />
           {this.renderTag()}
         </div>
-        <Cardcontainer className="cardContainer" recipe={this.state.recipes} />  
-        
-        <Footer />  
+        <div className="wrapper">
+        <Cardcontainer className="cardContainer" recipe={this.state.recipes} />
+        </div>
+
+
       </div>
     );
   }
