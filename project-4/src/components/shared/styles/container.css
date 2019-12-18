@@ -1,9 +1,9 @@
 .snack {
-    background: #f8c446;
-    border-radius: 20px;
-    height: 40px;
-    font-size: 20px;
-    font-family: Muli;
+  background: #f8c446;
+  border-radius: 20px;
+  height: 40px;
+  font-size: 20px;
+  font-family: Muli;
   font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
@@ -13,17 +13,17 @@
 }
 
 .cardContainer {
-    display: flex;
- margin-bottom: 170px;  
- margin-left: 55px;
-margin-right: 40px;
-flex-flow: wrap row;
+  display: flex;
+  margin-bottom: 170px;
+  margin-left: 55px;
+  margin-right: 40px;
+  flex-flow: wrap row;
 }
-.ten-min{
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 50px;
-    font-family: Muli;
+.ten-min {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+  font-family: Muli;
   font-size: 35px;
   font-weight: bold;
   font-stretch: normal;
@@ -32,14 +32,13 @@ flex-flow: wrap row;
   letter-spacing: normal;
 }
 
-@media screen and (max-width: 420px) { 
-.cardContainer{
+@media screen and (max-width: 420px) {
+  .cardContainer {
     margin-bottom: 85px;
     justify-content: center;
     margin-top: 40px;
-}
-.ten-min{
-    display:none;
-}
-
+  }
+  .ten-min {
+    display: none;
+  }
 }
