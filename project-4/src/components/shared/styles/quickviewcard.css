@@ -1,15 +1,44 @@
 .quick-view-cont{
+    margin-top: -320px;
     margin-right: 15px;
     position: absolute;
     z-index: 50;
-    background-color: rgba(0, 0, 0, 0.062)
+    background-color: rgba(0, 0, 0, 0.87);
+    width:100vw;
+    height: 200vh;
+    max-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .quick-card{
+    background: white;
+    display: flex;
+    flex-direction: column;
     width: 698px;
     height: 611px;
+    padding: 20px 42px;
 }
+.close-modal{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -20px;    
+}
+
+.quick-view-recipe-main{
+    display: flex;
+}
+
+.quick-view-recipe-main-left{
+    width: 346px;
+}
+.quick-view-recipe-main-left img{
+    width: 100%;
+}
+
+
 .recipeName{}
 .recipeDesc{}
 

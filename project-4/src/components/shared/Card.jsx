@@ -7,7 +7,7 @@ const Card = props => {
       <div className="main-card">
         <img src={props.image} onClick={props.onClick} />
         
-        <div className="quickView">Quick View</div>
+        <div className="quickView" onClick={props.onClick}> Quick View</div>
         <div className="recipeName">{props.recipeName}</div>
         <div className="recipeDesc">{props.recipeDescription}</div>
         <div className="prepTime">
