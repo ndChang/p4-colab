@@ -1,21 +1,30 @@
 form{
     border: 1px solid #525757;
     width: 617px;
-    height: 49px;
+    height: 40px;
     border-radius: 20px;
     font-size: 19px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-family: "Quicksand";
+    margin-left: 57px;
+    margin-top: 25px;
+    margin-right: 0px;
+    flex-flow: row;
 }
 
 
 input{
-    width: 439px;
+    width: 560px;
     height: 24px;
     border: none;
     font-weight: bold;
+}
+
+.search-icon{
+    width: 24px;
+    margin-right: 1px;
 }
 
 @media screen and (max-width: 420px) {
@@ -27,7 +36,7 @@ input{
         
     }
     input{
-        width: 250px;
+        width:330px;
     }
     .snack{
         margin: 10px;

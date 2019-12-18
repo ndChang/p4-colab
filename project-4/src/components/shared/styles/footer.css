@@ -65,11 +65,12 @@
 @media screen and (max-width: 420px) {
   .second-footer {
     width: 100vw;
+    height: 61px;
     display: flex;
     flex-flow: column;
     position: fixed;
     bottom: 0;
-    border-top: black solid 5px;
+    border-top: black solid 1.1px;
     background-color: white;
   }
 
@@ -77,17 +78,47 @@
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
+    margin-right: 10px;
   }
   .img-container img {
-    width: 30px;
+    width: 36px;
   }
 
   .words-container {
     display: flex;
     flex-flow: row;
-
     justify-content: space-evenly;
+    margin-bottom: 2px;
+    bottom: 10px;
+    position: relative;
   }
+   
+  .img-container :nth-child(1){
+      position: relative;
+      top: 7px;
+      right: 8.5px;
+  }
+
+  .img-container :nth-child(2){
+    position: relative;
+    top: 7px;
+    right: 4px;
+  }
+
+
+  .img-container :nth-child(3){
+    position: relative;
+    top: 7px;
+    left: 7.5px;
+
+}
+
+
+
+
+
+
+
   .foot-container {
     display: none;
   }
