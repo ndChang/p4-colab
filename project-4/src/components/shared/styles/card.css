@@ -1,0 +1,60 @@
+.main-card-cont {
+    margin-left: 36px;
+    margin-right: 27px;
+    width: fit-content;
+    display: inline-flex;
+}
+.main-card {
+    width: 436px;
+    height: 340px;
+    border: 2px solid #6c5959;
+}
+.main-card-cont .main-card img {
+    width: 431.8px;
+    height: 238px;
+    border: 2px solid #6c5959;
+}
+
+.main-card-cont .main-card .recipeName {
+    font-family: 'Muli';
+    width: 381px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-card-cont .main-card .recipeDesc {
+    width: 252px;
+    height: 18px;
+    font-size: 14px;
+    font-family: 'Quicksand';
+}
+
+.main-card-cont .main-card .prepTime {
+    width: 138px;
+    height: 22px;
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+.main-card-cont .main-card .cookTime {
+    width: 138px;
+    height: 22px;
+    font-family: 'Quicksand';
+    font-weight: bold;
+}
+
+
+.quickView{
+    display: none;
+    margin-top: -51px;
+    height: 51px;
+    background-color: rgba(255, 249, 249, 1);
+    font-size: 16px;
+    position: absolute;
+    width: 435.8px;
+}
+.main-card-cont:hover .quickView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
