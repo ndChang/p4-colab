@@ -1,51 +1,75 @@
-import React, {Component} from 'react'
-import axios from 'axios'
-import Card from './shared/Card'
+import React, { Component } from "react";
+import axios from "axios";
+import Card from "./shared/Card";
 
 class Cardcontainer extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { 
-            recipes: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipes: []
+    };
+  }
+  renderCards = () => {
+    let { recipes } = this.state;
+    let cardsAt10 = [];
+    let cardsAbove10 = [];
+    if (recipes.length) {
+      for (let i = 0; i < 5; i++) {
+        console.log(
+          "prep time for recipe is: ",
+          recipes[i].cookTime + recipes[i].cookTime
+        );
+        let time = recipes[i].cookTime + recipes[i].cookTime;
+        if (time <= 10) {
+          cardsAt10.push(
+            <Card
+              key={i}
+              image={recipes[i].image}
+              recipeName={recipes[i].recipeName}
+              recipeDescription={recipes[i].recipeDescription}
+              prepTime={recipes[i].prepTime}
+              cookTime={recipes[i].cookTime}
+            />
+          );
+        } else {
+          cardsAbove10.push(
+            <Card
+              key={i}
+              image={recipes[i].image}
+              recipeName={recipes[i].recipeName}
+              recipeDescription={recipes[i].recipeDescription}
+              prepTime={recipes[i].prepTime}
+              cookTime={recipes[i].cookTime}
+            />
+          );
         }
-    }
-    renderCards = () => {
-        let { recipes } = this.state
-        let cards = []
-
-        if(recipes.length) {
-            for(let i = 0; i < 5 ; i++) {
-                console.log(recipes[i].image)
-                cards.push(<Card key={i} image={recipes[i].image} recipeName={recipes[i].recipeName} recipeDescription={recipes[i].recipeDescription} prepTime={recipes[i].prepTime} cookTime={recipes[i].cookTime} />)
-            }
-        }
-        return cards
-    }
-
-    renderModal = (modal) =>{
-         
-    }
-    componentDidMount() {
-        this.fetchData();
       }
-    
-      fetchData = async () => {
-        const food = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes/`)
-    
-        this.setState({
-            recipes: food.data
-        }, () => console.log(this.state.recipes,"look") )
-      }
-
-    render() {
-        return (
-            <>
-            <h4 className='ten-min'>10 minutes</h4>
-            <div className={this.props.className}>
-            { this.renderCards([]) }
-            </div>
-            </>
-        )
     }
+    return [
+      <h4 className="ten-min">10 minutes</h4>,
+      <div className={this.props.className}>{cardsAt10}</div>,
+      <h4 className="ten-min">15 minutes</h4>,
+      <div className={this.props.className}>{cardsAbove10}</div>
+    ];
+  };
+
+  renderModal = modal => {};
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async () => {
+    const food = await axios.get(
+      `https://5dced59675f9360014c2642c.mockapi.io/recipes/`
+    );
+
+    this.setState({
+      recipes: food.data
+    });
+  };
+
+  render() {
+    return <>{this.renderCards([])}</>;
+  }
 }
-export default Cardcontainer
+export default Cardcontainer;
