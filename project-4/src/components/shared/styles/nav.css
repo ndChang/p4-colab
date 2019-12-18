@@ -5,22 +5,30 @@
   display: flex;
 
   }
+  .line-bar img {
+      display :none;
+      width: 25px;
+      height: 23px;
+      margin-left: 35px;
+      margin-top: 22px;
+  }
+
   .cart-counter{
     background-color: #f8c446;
     width: 13px;
     height: 13px;
     border-radius: 250px;
-    position: relative;
-    left: 1258px;
-    top: 8px;
+    margin-right: 20px;
+    margin-left: 170px;
+    position: absolute;
   }
   .nav-container {
     display: flex;
     flex-flow:row;
     margin-left: auto;
     margin-top: 25px;
-  
   }
+
   .nav-container img {
   width: 25px;
   height: 25px;
@@ -140,5 +148,12 @@
     position: relative;
     left: 380px;
     top: 8px;
+  }
+  .line-bar img {
+    display: block;
+    width: 25px;
+    height: 23px;
+    margin-left: 35px;
+    margin-top: 22px;
   }
   }
