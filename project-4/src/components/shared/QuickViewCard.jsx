@@ -19,9 +19,11 @@ const QuickViewCard = props => {
 
 
         <div className="prepTime">
+          <img src="https://i.imgur.com/BNM27qD.png" />
           <strong>Prep Time: </strong> {props.prepTime}
         </div>
         <div className="cookTime">
+        <img src="https://i.imgur.com/BNM27qD.png" />
           <strong>Cook Time: </strong> {props.cookTime}
         </div>
       </div>
