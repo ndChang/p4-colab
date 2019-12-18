@@ -21,6 +21,10 @@ class Cardcontainer extends Component {
         }
         return cards
     }
+
+    renderModal = (modal) =>{
+         
+    }
     componentDidMount() {
         this.fetchData();
       }
