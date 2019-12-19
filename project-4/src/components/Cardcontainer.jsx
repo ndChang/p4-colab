@@ -14,7 +14,7 @@ class Cardcontainer extends Component {
     }
 
     handleClick = (qView) => {
-        //   console.log(<QuickViewCard/>)
+
         this.setState({
             qView: qView,
         })
@@ -46,10 +46,6 @@ class Cardcontainer extends Component {
         if (recipes.length) {
             { this.renderOverlay() }
             for (let i = 0; i < 5; i++) {
-                console.log(
-                    "prep time for recipe is: ",
-                    recipes[i].cookTime + recipes[i].cookTime
-                );
                 let time = recipes[i].cookTime + recipes[i].cookTime;
                 if (time <= 10) {
                     cardsAt10.push(

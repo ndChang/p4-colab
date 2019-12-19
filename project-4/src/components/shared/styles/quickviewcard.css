@@ -16,8 +16,8 @@
     background: white;
     display: flex;
     flex-direction: column;
-    width: 698px;
-    height: 611px;
+    width: 40vw;
+    height: 40vh;
     padding: 20px 42px;
     margin-top: 30vh;
 }
