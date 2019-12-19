@@ -25,7 +25,7 @@ input{
     margin-left: 8px;
 }
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 425px) {
     form {
         width: 25em;
         height: 1.9em;
@@ -36,7 +36,7 @@ input{
         width: 18px;
     }
     input{
-        width:330px;
+        width: 330px;
     }
     
     .snack{
@@ -51,11 +51,6 @@ input{
 }
 @media screen and (max-width: 812px) {
     form {
-        margin-left: 5.5%;
-    }
-}
-@media only screen and (max-width: 1024px) {
-    form {
-        margin-left: 15%;
+        margin-left: 8%;
     }
 }
