@@ -34,13 +34,13 @@ class Cardcontainer extends Component {
             const qView = this.state.qView
         return <QuickViewCard
             onClick={this.toggleOverlay}
-            image={qView.image}
-            recipeName={qView.recipeName}
-            recipeDescription={qView.recipeDescription} 
-            prepTime={qView.prepTime}
-            cookTime={qView.cookTime}
-            listName="Ingredients"
-            listItemClick={this.updateCart}
+            // image={qView.image}
+            // recipeName={qView.recipeName}
+            // recipeDescription={qView.recipeDescription} 
+            // prepTime={qView.prepTime}
+            // cookTime={qView.cookTime}
+            // listName="Ingredients"
+            // listItemClick={this.updateCart}
             // {...qView}
         />
     }
