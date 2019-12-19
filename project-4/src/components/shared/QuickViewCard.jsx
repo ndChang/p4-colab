@@ -1,30 +1,40 @@
 import React from "react";
 import "./styles/quickviewcard.css";
 import plusbutton from './styles/images/plusbutton.png'
+import xbutton from './styles/images/xbutton.png'
+import fivestars from './styles/images/fivestars.png'
+
 const QuickViewCard = props => {
     return (
         <div className="quick-view-cont">
             <div className="quick-card">
 
                 <div className="close-modal">
-                    <button onClick={() => props.onClick()}>close</button>
+                    <button className='close-button' onClick={() => props.onClick()}>
+                        <img src={xbutton}></img></button>
                 </div>
                 <h2 className="quick-recipeName">{props.recipeName}</h2>
                 <div className="quick-view-recipe-main">
                     <div className="quick-view-recipe-main-left">
                         <img src={props.image} />
+                        <div className='rating-container'>
+                        <img src ={fivestars} className='five-stars' ></img>
+                         <p className='rating-numb'>(49)</p>
+                         </div>
+
+
                         <div className="quick-recipeDesc">{props.recipeDescription}</div>
                     </div>
                     <div className="quick-view-recipe-main-right">
                         <div className="quick-prepTime">
                             <img src="https://i.imgur.com/BNM27qD.png" />
 
-                            <strong>Prep Time: </strong> {props.prepTime}
+                            <strong>Prep Time: </strong>  {props.prepTime} min
                         </div>
                         <div className="quick-cookTime">
                             <img src="https://i.imgur.com/BNM27qD.png" />
 
-                            <strong>Cook Time: </strong> {props.cookTime}
+                            <strong>Cook Time: </strong>  {props.cookTime} min
 
 
                         </div>
