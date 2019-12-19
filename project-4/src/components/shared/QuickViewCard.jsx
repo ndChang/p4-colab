@@ -9,7 +9,7 @@ class QuickViewCard extends Component {
         super(props) 
 
         this.state = {
-            ingredient: null
+            ingredient: []
         }
     }
     componentDidMount() {
@@ -20,24 +20,29 @@ class QuickViewCard extends Component {
         console.log("lookhere", ingredients)
         this.setState({
             ingredient: ingredients.data
-        }, () => console.log(this.state.ingredient,"look") )
+        }, () => console.log(this.state.ingredient,"first look") )
       }
 
     renderIngredients = () => {
-        if (this.state.ingredients.length) {
-          return this.state.ingredients.map(ingredient => {
-            return (
-              <Card
-                className="ingredient"
-                name={`${ingredient}`}
-                onClick={() => this.handleClick(ingredient)}
-              />
-            );
+        console.log("looooook",this.state.ingredient.length)
+        const newArr = []
+        if (this.state.ingredient.length) {
+            console.log('true')
+         this.state.ingredient.map(ingredient => {
+                newArr.push(<p>{ingredient.id}</p>)
+                console.log("its me",newArr)
+                // <div className='ingredients'>
+                
+                // <img src={plusbutton}></img>
+                // </div>
           });
         }
+        console.log(newArr)
+        return <>{newArr}</>
       };
 
     render() {
+        
     return (
         <div className="quick-view-cont">
             <div className="quick-card">
@@ -64,18 +69,10 @@ class QuickViewCard extends Component {
 
 
                         </div>
-                        <div className='ingred-container'>
-
-                            <div>{this.props.ingredient}</div>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
+                <div className='list-container'>
+                        {this.renderIngredients()}
                         </div>
-                        
+
                     </div>
 
                 </div>
