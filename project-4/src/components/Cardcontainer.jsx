@@ -25,26 +25,23 @@ class Cardcontainer extends Component {
     }));
   };
 
-  updateCart = () => {
-    console.log("item was clicked");
-  };
-  renderOverlay = () => {
-    while (this.state.showOverlay) {
-      const qView = this.state.qView;
-      return (
-        <QuickViewCard
-          onClick={this.toggleOverlay}
-          image={qView.image}
-          recipeName={qView.recipeName}
-          recipeDescription={qView.recipeDescription}
-          prepTime={qView.prepTime}
-          cookTime={qView.cookTime}
-          listName="Ingredients"
-          listItemClick={this.updateCart}
-          decrement={this.props.decrement}
-          // {...qView}
+    updateCart = () => {
+        console.log("item was clicked")
+    } 
+    renderOverlay = () => {
+        while(this.state.showOverlay) {
+            const qView = this.state.qView
+        return <QuickViewCard
+            onClick={this.toggleOverlay}
+            // image={qView.image}
+            // recipeName={qView.recipeName}
+            // recipeDescription={qView.recipeDescription} 
+            // prepTime={qView.prepTime}
+            // cookTime={qView.cookTime}
+            // listName="Ingredients"
+            // listItemClick={this.updateCart}
+            // {...qView}
         />
-      );
     }
   };
 
