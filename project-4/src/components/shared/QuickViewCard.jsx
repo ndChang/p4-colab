@@ -31,12 +31,9 @@ class QuickViewCard extends Component {
         if (this.state.ingredient.length) {
             console.log('true')
          this.state.ingredient.map(ingredient => {
-                newArr.push(<p>{ingredient.id}</p>)
-                console.log("its me",newArr)
-                // <div className='ingredients'>
+                newArr.push(<p>{ingredient.name} <img src={plusbutton}/></p>)
+                console.log("its me",newArr)    
                 
-                // <img src={plusbutton}></img>
-                // </div>
           });
         }
         console.log(newArr)
@@ -72,20 +69,20 @@ class QuickViewCard extends Component {
                         <div className="quick-prepTime">
                             <img src="https://i.imgur.com/BNM27qD.png" />
 
-
                             <strong>Prep Time: </strong>  {this.props.prepTime} min
                           
                         </div>
                         <div className="quick-cookTime">
                             <img src="https://i.imgur.com/BNM27qD.png" />
 
-
                             <strong>Cook Time: </strong>  {this.props.cookTime} min
-
 
                         </div>
                 <div className='list-container'>
                         {this.renderIngredients()}
+                        <div className='ingredients'>
+                        
+                </div>
                         </div>
 
                     </div>
