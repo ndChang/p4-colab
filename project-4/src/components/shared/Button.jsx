@@ -32,9 +32,11 @@ class Button extends React.Component {
 
   render() {
     return (
+        <div className="ingredients">
       <p>
         {this.props.name} {this.wasAddedToCart()}
       </p>
+      </div>
     );
   }
 }
