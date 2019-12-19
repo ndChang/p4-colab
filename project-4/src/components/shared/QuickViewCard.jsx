@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/quickviewcard.css";
 import plusbutton from './styles/images/plusbutton.png'
 const QuickViewCard = props => {
+    console.log(props.decrement)
     return (
         <div className="quick-view-cont">
             <div className="quick-card">
@@ -64,7 +65,7 @@ export default QuickViewCard;
 
 // fetchData = async () => {
 //     const food = await axios.get(
-//         `https://5dced59675f9360014c2642c.mockapi.io/recipes/`
+//         `https://5dced59675f9360014c2642c.mockapi.io/recipes/1/ingredients`
 //     );
 
 //     this.setState({

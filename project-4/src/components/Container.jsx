@@ -15,7 +15,8 @@ class Container extends React.Component {
     this.state = {
       recipes: [],
       searchTags: [],
-      searchValue: ""
+      searchValue: "",
+      cartCount: 0
     };
   }
   componentDidMount() {
@@ -77,10 +78,20 @@ class Container extends React.Component {
     e.target.reset()
   };
 
+  incrementCounter = () => {
+    this.setState({
+      cartCount: this.state.cartCount + 1
+    })
+  }
+  decrementCounter = () => {
+    this.setTag({
+      cartCount: this.state.cartCount -1
+    })
+  }
   render() {
     return (
       <div>
-        <Nav />
+        <Nav count={this.state.cartCount}/>
         <div className="flex">
           <Search
             onChange={this.handleChange}
@@ -91,7 +102,7 @@ class Container extends React.Component {
           />
           {this.renderTag()}
         </div>
-        <Cardcontainer className="cardContainer" recipe={this.state.recipes} />  
+        <Cardcontainer className="cardContainer" recipe={this.state.recipes} increment={this.incrementCounter} decrement={this.decrementCounter}/>  
         
         <Footer />  
       </div>
