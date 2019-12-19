@@ -56,23 +56,30 @@ margin-top: 50px;
 
 
 .quick-prepTime{
-    margin-right: 145px;
-    margin-bottom: 5px;
-    letter-spacing: normal;
+    word-spacing: 3px;
+    display: flex;
+    width: 265px;
+    margin-right: 100px;
+    letter-spacing: 1px;
+    margin-bottom:4px;
+
 }
 .quick-cookTime{
-    margin-right: 145px;
-    letter-spacing: normal;
+    word-spacing: 1px;
+    display: flex;
+    width: 265px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
 
 }
 .quick-prepTime img{
-    width: 15px;
+    width: 21px;
     margin-right: 10px;
-    align-items: left;
 }
 .quick-cookTime img{
     margin-right: 10px;
-width: 15px;
+    width: 20px;
 }
 
 .ingredients{
@@ -82,14 +89,15 @@ width: 15px;
 }
 
 .ingredients p{
+    
     display: flex;
     flex-flow: row;
     width: 265px;
-    height: 50px;
+    height: 60px;
     border-bottom: solid 1px grey;
     align-items: center;
     font-family: 'Quicksand';
-    font-size: 16px;
+    font-size: 19px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -98,15 +106,45 @@ width: 15px;
 
 }
 .ingredients img{
-    width: 50px;
-    display: flex;
-    flex-flow: row;
-    margin-left: px;
-    border-bottom: none;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    margin-top: 5px;
 
 }
 .list-container{
 
     display: flex;
     flex-flow: column;
+}
+.close-button{
+    border: none;
+    
+}
+.close-button img{   
+width: 20px;    
+}
+
+.quick-view-recipe-main-left .five-stars {
+    display: flex;
+    align-items: left;
+    margin-left: 5px;
+    width: 17vh;
+    height: 40px;
+}
+.rating-container{
+    display: flex;
+    align-items: center;
+}
+.rating-numb{
+    margin-left: 10px;
+
+  font-family: 'Quicksand';
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
 }

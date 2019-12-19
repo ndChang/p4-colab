@@ -3,6 +3,8 @@ import axios from 'axios'
 import Card from './Card'
 import "./styles/quickviewcard.css"
 import plusbutton from './styles/images/plusbutton.png'
+import xbutton from './styles/images/xbutton.png'
+import fivestars from './styles/images/fivestars.png'
 
 class QuickViewCard extends Component {
     constructor(props){
@@ -48,24 +50,37 @@ class QuickViewCard extends Component {
             <div className="quick-card">
 
                 <div className="close-modal">
-                    <button onClick={() => this.props.onClick()}>close</button>
+
+                    <button className='close-button' onClick={() => props.onClick()}>
+                        <img src={xbutton}></img></button>
                 </div>
                 <h2 className="quick-recipeName">{this.props.recipeName}</h2>
                 <div className="quick-view-recipe-main">
                     <div className="quick-view-recipe-main-left">
-                        <img src={this.props.image} />
-                        <div className="quick-recipeDesc">{this.props.recipeDescription}</div>
+
+                        <img src={props.image} />
+                        <div className='rating-container'>
+                        <img src ={fivestars} className='five-stars' ></img>
+                         <p className='rating-numb'>(49)</p>
+                         </div>
+
+
+                        <div className="quick-recipeDesc">{props.recipeDescription}</div>
+
                     </div>
                     <div className="quick-view-recipe-main-right">
                         <div className="quick-prepTime">
                             <img src="https://i.imgur.com/BNM27qD.png" />
 
-                            <strong>Prep Time: </strong> {this.props.prepTime}
+
+                            <strong>Prep Time: </strong>  {this.props.prepTime} min
+                          
                         </div>
                         <div className="quick-cookTime">
                             <img src="https://i.imgur.com/BNM27qD.png" />
 
-                            <strong>Cook Time: </strong> {this.props.cookTime}
+
+                            <strong>Cook Time: </strong>  {this.props.cookTime} min
 
 
                         </div>
