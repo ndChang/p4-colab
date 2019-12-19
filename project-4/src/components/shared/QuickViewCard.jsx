@@ -9,7 +9,6 @@ import Button from "./Button"
 
 
 import clock from './styles/images/clock.png'
-
 class QuickViewCard extends Component {
     constructor(props){
         super(props) 
