@@ -31,8 +31,10 @@ class QuickViewCard extends Component {
         const newArr = []
         if (this.state.ingredient.length) {
          this.state.ingredient.map(ingredient => {
+
           // newArr.push(<p>{ingredient.name} <img src={plusbutton} onClick={()=> this.updateCart()}/></p>) 
           newArr.push(<Button name={ingredient.name} increment={this.props.increment} decrement={this.props.decrement}/>) 
+
                 
           });
         }
