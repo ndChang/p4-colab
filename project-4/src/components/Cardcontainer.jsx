@@ -36,7 +36,7 @@ class Cardcontainer extends Component {
             onClick={this.toggleOverlay}
             image={qView.image}
             recipeName={qView.recipeName}
-            recipeDescription={qView.recipeDescription}
+            recipeDescription={qView.recipeDescription} 
             prepTime={qView.prepTime}
             cookTime={qView.cookTime}
             listName="Ingredients"

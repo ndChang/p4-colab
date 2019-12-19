@@ -8,14 +8,15 @@
     height: 340px;
     border: 2px solid #6c5959;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+
 .main-card-cont .main-card img {
     width: 385px;
     height: 241px;
-    border-bottom: 2px solid #6c5959;
-    border-top: 2px solid #6c5959;
-    margin-top: -1px;
+    border-bottom: 2px  #6c5959;
+    border-top: 2px  #6c5959;
+    margin-left: -1px;
     position: relative;
 }
 
@@ -77,7 +78,7 @@
 }
 
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) { 
+@media only screen and (max-width: 375px) and (max-height: 812px) { 
     
     .main-card {
         margin-left: 0px;
