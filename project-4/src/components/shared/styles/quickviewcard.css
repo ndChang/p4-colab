@@ -16,7 +16,7 @@
     background: white;
     display: flex;
     flex-direction: column;
-    width: 57vw;
+    width: 800px;
     height: 70vh;
     padding: 20px 42px;
     margin-top: 30vh;
@@ -38,43 +38,55 @@
     width: 40vh;
     height: 30vh;
 }
+.quick-view-image{
+    border: 2px solid #6c5959 ;
+
+}
 .quick-view-recipe-main-right{
     margin-left: 100px;
 }
 
 
 .quick-recipeName{
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 20px;
     border-bottom: solid grey 1px;
     padding-bottom: 10px;
 }
 
 .quick-recipeDesc{
-margin-top: 50px;
+margin-top: 25px;
+text-align: left;
+font-size: 19px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: normal;
+letter-spacing: normal;
+font-family: 'quicksand';
 }
 
 
 .quick-prepTime{
-    word-spacing: 3px;
     display: flex;
     width: 265px;
-    margin-right: 100px;
     letter-spacing: 1px;
     margin-bottom:4px;
+    font-family: 'quicksand' monospace;
 
 }
 .quick-cookTime{
-    word-spacing: 1px;
     display: flex;
     width: 265px;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    font-family: 'quicksand' monospace;
+
 
 
 }
 .quick-prepTime img{
-    width: 21px;
+    width: 20px;
     margin-right: 10px;
 }
 .quick-cookTime img{
@@ -84,39 +96,37 @@ margin-top: 50px;
 
 .ingredients{
     display: flex;
-    flex-flow: row;
-
+    
 }
 
 .ingredients p{
-    
+    width: 300px;
     display: flex;
     flex-flow: row;
-    width: 265px;
     height: 60px;
     border-bottom: solid 1px grey;
     align-items: center;
+    align-content: left;
     font-family: 'Quicksand';
-    font-size: 19px;
+    font-size: 18px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
+    justify-content: space-between;
 
 }
 .ingredients img{
+    display: flex;
     width: 55px;
     height: 55px;
     align-items: center;
-    margin-top: 5px;
+
+    margin-top: 2.5px;
 
 }
-.list-container{
 
-    display: flex;
-    flex-flow: column;
-}
 .close-button{
     border: none;
     
@@ -128,7 +138,6 @@ width: 20px;
 .quick-view-recipe-main-left .five-stars {
     display: flex;
     align-items: left;
-    margin-left: 5px;
     width: 17vh;
     height: 40px;
 }
@@ -154,5 +163,5 @@ width: 20px;
 
 
 
-    
+
 }

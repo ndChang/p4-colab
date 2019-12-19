@@ -37,8 +37,8 @@ class Cardcontainer extends Component {
           // image={qView.image}
           // recipeName={qView.recipeName}
           // recipeDescription={qView.recipeDescription}
-          // prepTime={qView.prepTime}
-          // cookTime={qView.cookTime}
+          prepTime={qView.prepTime}
+          cookTime={qView.cookTime}
           // listName="Ingredients"
           // listItemClick={this.updateCart}
           // {...qView}

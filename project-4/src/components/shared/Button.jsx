@@ -1,6 +1,6 @@
 import React from "react";
 import plusbutton from "./styles/images/plusbutton.png";
-import minusbutton from "./styles/images/minusbutton.png"
+import minusbutton from "./styles/images/minusbutton.png";
 
 class Button extends React.Component {
   constructor(props) {
@@ -14,7 +14,8 @@ class Button extends React.Component {
     if (!this.state.clicked) {
       return (
         <img
-          src={plusbutton}s
+          src={plusbutton}
+          s
           onClick={() => {
             this.setState({ clicked: true });
 
@@ -24,18 +25,23 @@ class Button extends React.Component {
       );
     } else {
       // this.setState({clicked: false})
-      return <img src={minusbutton} onClick={() => {
-        this.setState({ clicked: false });  
-        this.props.decrement()}} />;
+      return (
+        <img
+          src={minusbutton}
+          onClick={() => {
+            this.setState({ clicked: false });
+            this.props.decrement();
+          }}
+        />
+      );
     }
   };
 
   render() {
     return (
-        <div className="ingredients">
-      <p>
-        {this.props.name} {this.wasAddedToCart()}
-      </p>
+      <div className="ingredients">
+        <p>{this.props.name}</p>
+        {this.wasAddedToCart()}
       </div>
     );
   }

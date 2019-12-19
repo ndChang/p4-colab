@@ -5,9 +5,10 @@ import "./styles/quickviewcard.css"
 import plusbutton from './styles/images/plusbutton.png'
 import xbutton from './styles/images/xbutton.png'
 import fivestars from './styles/images/fivestars.png'
-import button from './Button'
 import Button from "./Button"
 
+
+import clock from './styles/images/clock.png'
 class QuickViewCard extends Component {
     constructor(props){
         super(props) 
@@ -61,34 +62,37 @@ class QuickViewCard extends Component {
                 <div className="quick-view-recipe-main">
                     <div className="quick-view-recipe-main-left">
 
-                        <img src={this.props.image} />
+                        <img  className='quick-view-image'src={this.props.image} />
                         <div className='rating-container'>
                         <img src ={fivestars} className='five-stars' ></img>
                          <p className='rating-numb'>(49)</p>
                          </div>
 
 
-                        <div className="quick-recipeDesc">{this.props.recipeDescription}</div>
+                        <div className="quick-recipeDesc">This Simple Poached Egg and Avocado Toast 
+                        recipe is so simple and so delicious! Real, healthy food never tasted so good. 
+                        Top with a pinch of salt and pepper and sprig of parsley as a garnish. 
+                        Try to quarter a heirloom tomatoe! 
+</div>
 
                     </div>
                     <div className="quick-view-recipe-main-right">
                         <div className="quick-prepTime">
-                            <img src="https://i.imgur.com/BNM27qD.png" />
+                            <img src={clock} />
 
                             <strong>Prep Time: </strong>  {this.props.prepTime} min
                           
                         </div>
                         <div className="quick-cookTime">
-                            <img src="https://i.imgur.com/BNM27qD.png" />
+                            <img src={clock} />
 
                             <strong>Cook Time: </strong>  {this.props.cookTime} min
 
                         </div>
                 <div className='list-container'>
+
                         {this.renderIngredients()}
-                        <div className='ingredients'>
                         
-                </div>
                         </div>
 
                     </div>
