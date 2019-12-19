@@ -10,7 +10,7 @@
 
 .cardContainer {
   display: flex;
-  /* margin-bottom: 170px; */
+  margin-bottom: 80px;
   margin-left: 55px;
   margin-right: 40px;
   flex-flow: wrap row;
@@ -29,7 +29,7 @@
   margin-block-start: 0;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   .cardContainer {
     margin-bottom: 85px;
     justify-content: center;
@@ -37,5 +37,15 @@
   }
   .ten-min {
     display: none;
+  }
+}
+@media screen and (max-width: 812px) {
+  .ten-min {
+    display: none;
+  }
+  .cardContainer {
+    margin-bottom: 85px;
+    justify-content: center;
+    margin-top: 20px;
   }
 }

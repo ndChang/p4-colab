@@ -11,10 +11,10 @@ const Card = props => {
         <div className="recipeName">{props.recipeName}</div>
         <div className="recipeDesc">{props.recipeDescription}</div>
         <div className="prepTime">
-          <strong>Prep Time: </strong> {props.prepTime}
+          <strong>Prep Time: </strong> {props.prepTime} min
         </div>
         <div className="cookTime">
-          <strong>Cook Time: </strong> {props.cookTime}
+          <strong>Cook Time: </strong> {props.cookTime} min
           
         </div>
       </div>
