@@ -51,21 +51,21 @@ class QuickViewCard extends Component {
 
                 <div className="close-modal">
 
-                    <button className='close-button' onClick={() => props.onClick()}>
+                    <button className='close-button' onClick={() => this.props.onClick()}>
                         <img src={xbutton}></img></button>
                 </div>
                 <h2 className="quick-recipeName">{this.props.recipeName}</h2>
                 <div className="quick-view-recipe-main">
                     <div className="quick-view-recipe-main-left">
 
-                        <img src={props.image} />
+                        <img src={this.props.image} />
                         <div className='rating-container'>
                         <img src ={fivestars} className='five-stars' ></img>
                          <p className='rating-numb'>(49)</p>
                          </div>
 
 
-                        <div className="quick-recipeDesc">{props.recipeDescription}</div>
+                        <div className="quick-recipeDesc">{this.props.recipeDescription}</div>
 
                     </div>
                     <div className="quick-view-recipe-main-right">
