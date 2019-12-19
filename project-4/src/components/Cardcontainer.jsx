@@ -25,16 +25,23 @@ class Cardcontainer extends Component {
             showOverlay: !state.showOverlay
         }))
     }
+
+    updateCart = () => {
+        console.log("item was clicked")
+    } 
     renderOverlay = () => {
         while(this.state.showOverlay) {
             const qView = this.state.qView
         return <QuickViewCard
-            onClick={this.toggleOverlay}
-            image={qView.image}
-            recipeName={qView.recipeName}
-            recipeDescription={qView.recipeDescription}
-            prepTime={qView.prepTime}
-            cookTime={qView.cookTime}
+            // onClick={this.toggleOverlay}
+            // image={qView.image}
+            // recipeName={qView.recipeName}
+            // recipeDescription={qView.recipeDescription}
+            // prepTime={qView.prepTime}
+            // cookTime={qView.cookTime}
+            // listName="Ingredients"
+            // listItemClick={this.updateCart}
+            {...qView}
         />
     }
     }
@@ -56,7 +63,6 @@ class Cardcontainer extends Component {
                             recipeDescription={recipes[i].recipeDescription}
                             prepTime={recipes[i].prepTime}
                             cookTime={recipes[i].cookTime}
-
                             onClick={() => { this.handleClick(recipes[i]) }}
                         />
                     );
