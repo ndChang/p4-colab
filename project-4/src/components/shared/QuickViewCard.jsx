@@ -28,16 +28,50 @@ const QuickViewCard = props => {
 
 
                         </div>
-                        <div className='ingred-container'>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
-                            <p>2 eggs<img src={plusbutton}></img></p>
+                <div className='list-container'>
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
                         </div>
-                        
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        <div className='ingredients'>
+                            <p>2 eggs ana dabdjak</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        <div className='ingredients'>
+                            <p>2 eggs</p>
+                            <img src={plusbutton}></img>
+                        </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
                     </div>
 
                 </div>
