@@ -78,7 +78,7 @@
 }
 
 
-@media only screen and (max-width: 500px) { 
+@media only screen and (max-width: 512px) { 
     
     .main-card {
         margin-left: 0px;
@@ -164,6 +164,13 @@
     }
     }
     @media only screen and (max-width: 812px) {
+        .main-card-cont {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
         .main-card-cont {
             margin-top: 20px;
             display: flex;
