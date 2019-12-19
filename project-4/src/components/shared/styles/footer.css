@@ -73,7 +73,7 @@
     flex-flow: column;
     position: fixed;
     bottom: 0;
-    border-top: black solid 1.1px;
+    border-top: black solid 1.1px ;
     background-color: white;
   }
 

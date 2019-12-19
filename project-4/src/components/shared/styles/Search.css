@@ -13,7 +13,7 @@ form {
 }
 
 input{
-    width: 35em;
+    width: 62em;
     height: 24px;
     margin-left: 10px;
     border: none;
@@ -27,16 +27,18 @@ input{
 
 @media only screen and (max-width: 425px) {
     form {
-        width: 25em;
+        display: flex;
+        width: 350px;
         height: 1.9em;
-        margin-left: 5%;
-        margin-right: 5%; 
+        margin-left: auto;
+        margin-right: auto; 
     }
     .search-icon {
         width: 18px;
     }
     input{
-        width: 330px;
+        width: 300px;
+
     }
     
     .snack{
@@ -49,8 +51,4 @@ input{
         flex-flow: row wrap;
     }
 }
-@media screen and (max-width: 812px) {
-    form {
-        margin-left: 8%;
-    }
-}
+
