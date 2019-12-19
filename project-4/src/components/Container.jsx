@@ -28,7 +28,7 @@ class Container extends React.Component {
 
     this.setState({
         recipes: food.data
-    }, () => console.log(this.state.recipes,"look") )
+    })
   }
 
   setTag = () => {
@@ -83,7 +83,7 @@ class Container extends React.Component {
     })
   }
   decrementCounter = () => {
-    this.setTag({
+    this.setState({
       cartCount: this.state.cartCount -1
     })
   }

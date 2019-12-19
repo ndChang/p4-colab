@@ -25,23 +25,28 @@ class Cardcontainer extends Component {
     }));
   };
 
-    updateCart = () => {
-        console.log("item was clicked")
-    } 
-    renderOverlay = () => {
-        while(this.state.showOverlay) {
-            const qView = this.state.qView
-        return <QuickViewCard
-            onClick={this.toggleOverlay}
-            // image={qView.image}
-            // recipeName={qView.recipeName}
-            // recipeDescription={qView.recipeDescription} 
-            // prepTime={qView.prepTime}
-            // cookTime={qView.cookTime}
-            // listName="Ingredients"
-            // listItemClick={this.updateCart}
-            // {...qView}
+  updateCart = () => {
+    console.log("item was clicked");
+  };
+  renderOverlay = () => {
+    while (this.state.showOverlay) {
+      const qView = this.state.qView;
+      return (
+        <QuickViewCard
+          onClick={this.toggleOverlay}
+          // image={qView.image}
+          // recipeName={qView.recipeName}
+          // recipeDescription={qView.recipeDescription}
+          // prepTime={qView.prepTime}
+          // cookTime={qView.cookTime}
+          // listName="Ingredients"
+          // listItemClick={this.updateCart}
+          // {...qView}
+          decrement={this.props.decrement}
+          increment={this.props.increment}
+        //   cartCount={this.props.cartCount}
         />
+      );
     }
   };
 
@@ -108,7 +113,7 @@ class Cardcontainer extends Component {
   };
 
   render() {
-    // console.log("increment", this.props.increment);
+    console.log("increment", this.props.increment);
     // console.log("decrement", this.props.decrement)
     return (
       <>

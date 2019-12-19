@@ -5,6 +5,8 @@ import "./styles/quickviewcard.css"
 import plusbutton from './styles/images/plusbutton.png'
 import xbutton from './styles/images/xbutton.png'
 import fivestars from './styles/images/fivestars.png'
+import button from './Button'
+import Button from "./Button"
 
 class QuickViewCard extends Component {
     constructor(props){
@@ -19,20 +21,17 @@ class QuickViewCard extends Component {
     }
     fetchData = async () => {
         const ingredients = await axios.get(`https://5dced59675f9360014c2642c.mockapi.io/recipes/1/ingredients`)
-        console.log("lookhere", ingredients)
         this.setState({
             ingredient: ingredients.data
-        }, () => console.log(this.state.ingredient,"first look") )
+        })
       }
 
     renderIngredients = () => {
-        console.log("looooook",this.state.ingredient.length)
         const newArr = []
         if (this.state.ingredient.length) {
-            console.log('true')
          this.state.ingredient.map(ingredient => {
-                newArr.push(<p>{ingredient.name} <img src={plusbutton}/></p>)
-                console.log("its me",newArr)    
+          // newArr.push(<p>{ingredient.name} <img src={plusbutton} onClick={()=> this.updateCart()}/></p>) 
+          newArr.push(<Button name={ingredient.name} increment={this.props.increment} decrement={this.props.decrement}/>) 
                 
           });
         }
@@ -40,7 +39,14 @@ class QuickViewCard extends Component {
         return <>{newArr}</>
       };
 
+    updateCart = () => {
+      
+      return this.props.decrement()
+    }
+
     render() {
+      // console.log(this.props.decrement)
+      // console.log(this.props.increment)
         
     return (
         <div className="quick-view-cont">
