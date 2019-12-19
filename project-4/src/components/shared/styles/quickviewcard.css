@@ -114,6 +114,7 @@ font-family: 'quicksand';
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
+    justify-content: space-between;
 
 }
 .ingredients img{
