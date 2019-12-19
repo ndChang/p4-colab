@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/nav.css'
-function Nav() {
+function Nav(props) {
     return (
         <>
             <div className='nav'>
@@ -13,7 +13,7 @@ function Nav() {
             <div className='nav-container'>
                 <img className='icon-1' src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png' alt='user picture' />
                 <p>ABOUT</p>
-                <div className='cart-counter'></div>
+    <div className='cart-counter'>{props.count}</div>
                 <img className='icon-2' src='https://www.searchpng.com/wp-content/uploads/2019/02/Shopping-Cart-PNG-Icon-715x715.png' alt='shopping cart' />
                 </div>
             </div>

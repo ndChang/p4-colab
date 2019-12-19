@@ -38,6 +38,7 @@ input{
     }
     input{
         width: 300px;
+
     }
     
     .snack{
@@ -50,3 +51,4 @@ input{
         flex-flow: row wrap;
     }
 }
+

@@ -65,8 +65,7 @@
   display: none;
 }
 
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 425px) {
   .second-footer {
     width: 100vw;
     height: 61px;
@@ -84,6 +83,7 @@
     justify-content: space-evenly;
     margin-right: 10px;
   }
+
   .img-container img {
     width: 2.25em;
   }
@@ -114,7 +114,6 @@
     position: relative;
     top: 7px;
     left: 7.5px;
-
 }
 
 
