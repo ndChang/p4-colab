@@ -25,6 +25,7 @@ class Cardcontainer extends Component {
     }));
   };
 
+
   updateCart = () => {
     console.log("item was clicked");
   };
