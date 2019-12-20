@@ -1,21 +1,23 @@
 form {
     border: 1px solid #525757;
     width: 38.6em;
-    height: 2.5em;
+    height: 2.2em;
     border-radius: 20px;
     font-size: 19px;
     display: flex;
     align-items: center;
     font-family: "Quicksand";
-    margin-left: 27%;
-    margin-top: 25px;
+    margin-left: 3%;
+    margin-top: 40px;
+    margin-bottom: 50px;
     flex-flow: row;
 }
 
 input{
     width: 35em;
     height: 24px;
-    margin-left: 10px;
+    margin-left: 50px;
+    font-size: 18px;
     border: none;
     font-weight: bold;
 }
@@ -23,6 +25,9 @@ input{
 .search-icon {
     width: 22px;
     margin-left: 8px;
+}
+.flex {
+    display: flex;
 }
 
 @media only screen and (max-width: 425px) {
@@ -49,8 +54,4 @@ input{
         flex-flow: row wrap;
     }
 }
-@media screen and (max-width: 812px) {
-    form {
-        margin-left: 8%;
-    }
-}
+
