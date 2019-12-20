@@ -158,10 +158,191 @@ width: 20px;
 
 }
 
+.mobile-cart-container{
+    display: none;
+}
+
+
 
 @media only screen and (max-width: 425px) {
+    .quick-view-desktop{
+        display: none;
+    }
+    .mobile-cart-container{
+        margin-top: -100px;
+        background-color: white;
+        display: flex;
+        flex-flow: column;
+    }
+    .close-modal2{
+        background: white;
+        height: 60px;
+        align-content: center;
+        margin-top: 30px;
+        display: flex;
+        flex-flow: row;
+        border-bottom: solid 1px grey;
+        border-top: solid 1px grey;
+
+    }
+    .close-modal2 img{
+      display: flex;
+      width: 20px;
+      margin-right: 6px;
+      border-style: none;
+    }
+    .close-modal2 p{
+        display: flex;
+        width: 20px;
+        margin: auto;
+      }
+      .close-button2{
+          border: none;
+      }
+      .quick-card2{
+        background: white;
+        display: flex;
+        height:10px;
+    }
+    .quick-recipeName2{
+        font-size: 16px;
+        display: flex;
+        margin-left: auto;   
+        margin-right: auto;   
+        margin-top: 10px; 
+ 
+}
+    
+    .rating-container2{
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        margin-top: 25px;
+        margin-left: auto;   
+        margin-right: auto;          
+    }
+
+    .five-stars2{
+        width: 100px;
+    }
+.rating-numb2{
+    margin-left: 5px;
+}
+
+.image2-container{
+    width: 346px;
+    height: 255px;
+    border: #6c5959 1px solid;
+    margin-left: auto;   
+    margin-right: auto;  
+    margin-top: 10px;
+
+}
+.quick-view-image2 {
+    width: 346px;
+    height: 255px;
+}
+
+   
+.clock2-container{
+    display: flex;
+    width: 300px;
+    margin-right: auto;  
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.quick-prepTime2{
+    font-size: 14px;
+    display: flex;
+    font-family: 'quicksand' monospace;
+
+}
+.quick-cookTime2{
+    font-size: 14px;
+    display: flex;
+    letter-spacing: 1px;
+    font-family: 'quicksand' monospace;
+}
+.quick-cookTime2 img{
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+
+}
+.quick-prepTime2 img{
+    width: 15px;
+    height: 15px;
+
+}
+.list-container2{
+    margin-left: auto;   
+    margin-right: auto; }
+
+    .ingredients{
+        display: flex;
+        
+    }
+    
+    .ingredients p{
+        margin-top: 10px;
+        width: 250px;
+        display: flex;
+        flex-flow: wrap row;
+        height: 36px;
+        border-bottom: solid 1px grey;
+        align-items: center;
+        align-content: left;
+        font-family: 'Quicksand';
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+    
+    }
+    .ingredients img{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+    
+        margin-top: 4px;
+    
+    }
+
+
+
+    
+   
+  
+    
+  
 
 
 
 
+
+
+
+    .quick-recipeDesc2{
+        display: none;
+    margin-top: 0px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-family: 'quicksand';
+    }
+    
+    
+   
+    
+   
+    
+   
+   
 }

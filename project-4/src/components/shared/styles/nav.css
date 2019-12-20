@@ -74,7 +74,9 @@
   }
   
 
-  @media only screen and (max-width: 512px) {
+
+  @media only screen and (max-width: 425px) {
+
     .nav{
       height: 80px;
     }
@@ -117,7 +119,7 @@
     width: 40px;
     height: 40px;
     left: 18px;
-    top: -10px;
+    top: -15px;
     position:relative;
     display: none;
   }

@@ -65,8 +65,8 @@
   display: none;
 }
 
+@media screen and (max-width: 425px) {
 
-@media screen and (max-width: 512px) {
   .second-footer {
     width: 100vw;
     height: 61px;
@@ -74,7 +74,7 @@
     flex-flow: column;
     position: fixed;
     bottom: 0;
-    border-top: black solid 1.1px;
+    border-top: black solid 1.1px ;
     background-color: white;
   }
 
@@ -115,7 +115,6 @@
     position: relative;
     top: 7px;
     left: 7.5px;
-
 }
 
 

@@ -78,13 +78,15 @@
 }
 
 
-@media only screen and (max-width: 512px) { 
+
+@media only screen and (max-width: 425px) { 
+
     
     .main-card {
-        margin-left: 0px;
+        margin-left: 10px;
         margin-right: 0px;
-        width: 24.1em;
-        height: 18.1em;
+        width: 22.1em;
+        height: 18.5em;
         border: 2px solid #6c5959;
         margin-bottom: 10px;
     }
@@ -92,28 +94,26 @@
         margin-left: 8%;
     }
     .main-card-cont .main-card img {
-        width: 24.1em;
+        width: 22.1em;
         height: 15em;
         border-bottom: 2px solid #6c5959;
-        border-top: 2px solid #6c5959;
         position: relative;
-        margin-top: -2px;
+        margin-top: -1px;
         margin-left: .1px;
       
     }
     
     .main-card-cont .main-card .recipeName {
         font-family: 'Muli';
-        width: 23.8em;
+        width: 21.8em;
         height: 25px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 19px;
         text-align:left;
         margin-left: 5px;
     }
     
     .main-card-cont .main-card .recipeDesc {
-        width: 18.75em;
         height: 18px;
         font-size: 14px;
         font-family: 'Quicksand';

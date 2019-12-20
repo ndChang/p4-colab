@@ -1,6 +1,5 @@
 import React, {Component} from "react"
 import axios from 'axios'
-import Card from './Card'
 import "./styles/quickviewcard.css"
 import plusbutton from './styles/images/plusbutton.png'
 import xbutton from './styles/images/xbutton.png'
@@ -9,6 +8,7 @@ import Button from "./Button"
 
 
 import clock from './styles/images/clock.png'
+
 class QuickViewCard extends Component {
     constructor(props){
         super(props) 
@@ -52,6 +52,8 @@ class QuickViewCard extends Component {
       // console.log(this.props.increment)
         
     return (
+        <>
+<div className='quick-view-desktop'>
         <div className="quick-view-cont">
             <div className="quick-card">
 
@@ -103,6 +105,65 @@ class QuickViewCard extends Component {
             </div>
 
         </div>
+        </div>
+
+
+
+
+            <div className='mobile-cart-container'>
+
+                <div className="close-modal2">
+                    <p>Recipe</p>
+                    <button className='close-button2' onClick={() => this.props.onClick()}>
+                        <img src={xbutton}></img></button>
+                </div>
+                <div className="quick-card2">
+                    <h2 className="quick-recipeName2">{this.props.recipeName}</h2>
+                    </div>
+                    
+                    <div className='rating-container2'>
+                        <img src={fivestars} className='five-stars2' ></img>
+                        <p className='rating-numb2'>(49)</p>
+                        </div>
+             
+
+            <div className='image2-container'>
+            <img  className='quick-view-image2'src={this.props.image} />
+            </div>
+
+
+
+
+
+            <div className='clock2-container'>
+            <div className="quick-prepTime2">
+                <img src={clock} />
+
+                <strong>Prep Time: </strong>  {this.props.prepTime} min
+              
+            </div>
+            <div className="quick-cookTime2">
+                <img src={clock}  />
+
+                <strong>Cook Time: </strong>  {this.props.cookTime} min
+
+             </div>
+             </div>
+
+
+
+
+            
+    <div className='list-container2'>
+
+            {this.renderIngredients()}
+            
+
+        </div>
+
+    </div>
+
+        </>
     
     )};
 };
