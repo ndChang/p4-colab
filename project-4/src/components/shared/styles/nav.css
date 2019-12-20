@@ -128,7 +128,7 @@
     width: 40px;
     height: 40px;
     left: 18px;
-    top: -10px;
+    top: -12.5px;
     position:relative;
 
   }
@@ -158,5 +158,8 @@
     height: 23px;
     margin-left: 35px;
     margin-top: 22px;
+  }
+  .cart-counter{
+
   }
   }

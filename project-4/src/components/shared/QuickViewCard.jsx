@@ -128,7 +128,7 @@ class QuickViewCard extends Component {
              
 
             <div className='image2-container'>
-            <img  className='quick-view-image2'src={this.props.image} />
+            <img  className='quick-view-image2'src={this.props.image}></img>
             </div>
 
 
