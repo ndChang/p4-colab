@@ -14,9 +14,9 @@ form {
 }
 
 input{
-    width: 62em;
+    width: 650px;
     height: 24px;
-    margin-left: 50px;
+    margin-left: 40px;
     font-size: 18px;
     border: none;
     font-weight: bold;
@@ -44,7 +44,9 @@ input{
         width: 18px;
     }
     input{
-        width: 300px;
+        width: 275px;
+        margin-left: 40px;
+        font-size: 14px;
 
     }
     
@@ -59,14 +61,6 @@ input{
     }
 }
 
-@media screen and (max-width: 812px) {
-    form {
-        margin-left: 5.5%;
-    }
-}
-@media only screen and (max-width: 1024px) {
-    form {
-        margin-left: 15%;
-    }
-}
+
+
 
