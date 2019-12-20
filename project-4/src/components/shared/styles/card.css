@@ -17,6 +17,8 @@
     border-bottom: 2px  #6c5959;
     border-top: 2px  #6c5959;
     margin-left: -1px;
+    margin-top: -1px;
+
     position: relative;
 }
 
@@ -83,8 +85,6 @@
 
     
     .main-card {
-        margin-left: 10px;
-        margin-right: 0px;
         width: 22.1em;
         height: 18.5em;
         border: 2px solid #6c5959;
@@ -94,18 +94,16 @@
         margin-left: 8%;
     }
     .main-card-cont .main-card img {
-        width: 22.1em;
-        height: 15em;
+        width: 22.2em;
+        height: 15.1em;
         border-bottom: 2px solid #6c5959;
         position: relative;
         margin-top: -1px;
-        margin-left: .1px;
       
     }
     
     .main-card-cont .main-card .recipeName {
         font-family: 'Muli';
-        width: 21.8em;
         height: 25px;
         font-weight: bold;
         font-size: 19px;
