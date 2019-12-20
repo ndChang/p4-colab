@@ -13,7 +13,7 @@
 .foot-title {
   font-size: 30px;
   margin-left: 90px;
-  margin-top: 45px;
+  margin-top: 55px;
   font-weight: 800;
   font-family: 'Muli';
 }
@@ -22,6 +22,10 @@
   margin-left: 165px;
   font-size: 18px;
   font-family: 'Muli';
+  margin-bottom: 20px;
+}
+.login-about p{
+  margin-bottom: 30px;
 }
 
 .terms-privacy {
@@ -30,12 +34,22 @@
   font-size: 18px;
   font-family: 'Muli';
 }
+
+.terms-privacy p{
+  margin-bottom: 30px;
+
+}
 .contact {
   margin-top: 45px;
   margin-left: 165px;
   font-size: 18px;
   font-weight: 800;
   font-family: 'Muli';
+}
+
+.contact p{
+  margin-bottom: 30px;
+
 }
 .email {
   font-weight: 200;
@@ -46,6 +60,10 @@
   margin-left: 165px;
   font-family: 'Muli';
   font-weight: bold;
+}
+.social-media p{
+  margin-bottom: 22px;
+
 }
 .social-media img {
   width: 5.3em;
@@ -82,6 +100,7 @@
     flex-flow: row;
     justify-content: space-evenly;
     margin-right: 10px;
+    margin-bottom: 5px;
   }
 
   .img-container img {
@@ -105,7 +124,8 @@
 
   .img-container :nth-child(2){
     position: relative;
-    top: 7px;
+    width: 35px;
+    top: 5px;
     right: 4px;
   }
 
@@ -147,10 +167,7 @@
   }
 }
 
-@media screen and (max-width: 812px) {
-  .foot-container {
-    width: 100%;
-  }
-}
+
+
 
 

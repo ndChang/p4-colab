@@ -165,10 +165,12 @@ width: 20px;
 
 
 @media only screen and (max-width: 425px) {
+
     .quick-view-desktop{
         display: none;
     }
     .mobile-cart-container{
+
         margin-top: -100px;
         background-color: white;
         display: flex;
@@ -197,7 +199,6 @@ width: 20px;
         margin: auto;
       }
       .close-button2{
-          border: none;
       }
       .quick-card2{
         background: white;
@@ -255,6 +256,7 @@ width: 20px;
     font-size: 14px;
     display: flex;
     font-family: 'quicksand' monospace;
+    margin-left: 20px;
 
 }
 .quick-cookTime2{
@@ -276,7 +278,9 @@ width: 20px;
 }
 .list-container2{
     margin-left: auto;   
-    margin-right: auto; }
+    margin-right: auto; 
+    margin-top: 20px;
+}
 
     .ingredients{
         display: flex;
