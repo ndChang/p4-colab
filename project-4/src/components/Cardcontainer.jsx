@@ -34,7 +34,7 @@ class Cardcontainer extends Component {
       return (
         <QuickViewCard
           onClick={this.toggleOverlay}
-          // image={qView.image}
+          image={qView.image}
           // recipeName={qView.recipeName}
           // recipeDescription={qView.recipeDescription}
           prepTime={qView.prepTime}
