@@ -175,6 +175,7 @@ width: 20px;
         background-color: white;
         display: flex;
         flex-flow: column;
+        margin-bottom: 1000px;
     }
     .close-modal2{
         background: white;
