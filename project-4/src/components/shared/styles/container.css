@@ -33,6 +33,7 @@
 }
 
 @media screen and (max-width: 425px) {
+
   .cardContainer {
     margin-bottom: 85px;
     justify-content: center;
