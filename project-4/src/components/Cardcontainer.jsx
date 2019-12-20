@@ -39,12 +39,9 @@ class Cardcontainer extends Component {
           recipeDescription={qView.recipeDescription}
           prepTime={qView.prepTime}
           cookTime={qView.cookTime}
-          // listName="Ingredients"
-          // listItemClick={this.updateCart}
-          // {...qView}
+ 
           decrement={this.props.decrement}
           increment={this.props.increment}
-        //   cartCount={this.props.cartCount}
         />
       );
     }
@@ -97,7 +94,6 @@ class Cardcontainer extends Component {
     ];
   };
 
-  // renderModal = modal => { };
   componentDidMount() {
     this.fetchData();
   }
@@ -114,7 +110,6 @@ class Cardcontainer extends Component {
 
   render() {
     console.log("increment", this.props.increment);
-    // console.log("decrement", this.props.decrement)
     return (
       <>
         {this.renderOverlay()}
